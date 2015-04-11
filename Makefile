@@ -17,4 +17,4 @@ server:
 
 watch:
 	@echo Watching for changes...
-	watchmedo shell-command -c 'make compile' ${SITE_DIR}
+	watchmedo shell-command --command 'make compile' --recursive $(SITE_DIR)
