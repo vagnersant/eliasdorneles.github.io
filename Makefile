@@ -6,7 +6,7 @@ help:
 	@echo watch - watch for changes and update static files
 
 compile:
-	pelican ${SITE_DIR} -o output
+	pelican ${SITE_DIR} -o output -s settings.py
 
 clean:
 	rm -rf output cache
