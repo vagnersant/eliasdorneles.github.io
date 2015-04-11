@@ -1,7 +1,12 @@
 SHELL := /bin/bash
+SITE_DIR := site
 
-compile: crowsfoot
-	pelican blog -o output
+help:
+	@echo server - start a server on output dir
+	@echo watch - watch for changes and update static files
+
+compile:
+	pelican ${SITE_DIR} -o output
 
 clean:
 	rm -rf output cache
@@ -12,4 +17,4 @@ server:
 
 watch:
 	@echo Watching for changes...
-	watchmedo shell-command -c 'make compile' blog/
+	watchmedo shell-command -c 'make compile' ${SITE_DIR}
