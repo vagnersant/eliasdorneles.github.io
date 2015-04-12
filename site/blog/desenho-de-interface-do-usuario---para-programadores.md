@@ -27,7 +27,7 @@ Tempo muito bem gasto, diga-se de passagem, porque o conteúdo é muito
 bom! O Joel escreve bem pra caramba, a leitura é muito engajante e as
 histórias que ele conta são bem divertidas.
 
-^**UPDATE:** Recentemente,\\ descobri\\ que\\ tem\\ [uma\\ tradução\\ dos\\ posts\\ do\\ Joel\\ Spolsky\\ que\\ fizeram\\ o\\ livro\\ aqui](http://brazil.joelonsoftware.com/ "Tradução dos posts do Joel"): [http://brazil.joelonsoftware.com](http://brazil.joelonsoftware.com/).\\ Vou\\ deixar\\ aqui\\ em\\ letra\\ miudinha\\ porque\\ né...\\ :D^
+**UPDATE:** Recentemente, descobri que tem [uma tradução dos posts do Joel Spolsky que fizeram o livro aqui](http://brazil.joelonsoftware.com/ "Tradução dos posts do Joel"): [http://brazil.joelonsoftware.com](http://brazil.joelonsoftware.com/).
 
 Ele comenta sobre o desgosto que alguns programadores têm de fazer
 interfaces, provavelmente baseado no medo injustificado de ter que fazer
@@ -49,12 +49,11 @@ software!
 
 Todavia, quando o usuário consegue fazer o que queria, o programa
 funciona do jeito que ele esperava, o resultado é um usuário bem
-animado. *Funcionou! Ripei um DVD! Que massa esse programa! \\o/*
+animado. *Funcionou! Ripei um DVD! Que massa esse programa! \o/*
 
 Por isso, a primeira coisa importante a se ter em mente é:
 
-**Uma interface é bem-feita quando o programa se comporta exatamente
-como o usuário esperava.**
+### Uma interface é bem-feita quando o programa se comporta exatamente como o usuário esperava.
 
 Todas as regras e princípios restantes são corolários a esta.
 
@@ -129,18 +128,15 @@ a torneira](http://sivers.org/quirks).
 
 A segunda grande regra de desenho de interface do Joel é:
 
-**Cada vez que você apresenta uma opção, você está pedindo ao usuário
-para tomar uma decisão.**
+### Cada vez que você apresenta uma opção, você está pedindo ao usuário para tomar uma decisão.
 
 O que não é necessariamente uma coisa ruim, é claro. Todo mundo gosta de
 poder escolher certas coisas, é por isso que Subway, Spoletto e outros
 restaurantes do tipo fazem sucesso. Todavia, ninguém gosta de escolher
 coisas que *simplesmente não interessam*.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [![Lembra desse cara chato?](http://eljunior.files.wordpress.com/2013/03/clippy-letter20110724-22047-qcxdai.png)](http://eljunior.files.wordpress.com/2013/03/clippy-letter20110724-22047-qcxdai.png)
   Lembra desse cara chato?
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 E a verdade é que a maioria dos usuários não se importam com tanta coisa
 quanto você pode achar. Joel dá um exemplo do que não fazer, citando o
@@ -159,7 +155,7 @@ Resumindo: *pense muito bem antes de forçar o usuário decidir sobre uma
 coisa*. Em geral, você deve tentar minimizar a quantidade de decisões,
 deixando apenas o que realmente importa.
 
-**Como criar interfaces para pessoas que têm mais o que fazer na vida**
+## Como criar interfaces para pessoas que têm mais o que fazer na vida
 
 Quando você desenha interfaces para o usuário, diz Joel, é uma boa idéia
 manter dois princípios em mente:
@@ -190,49 +186,47 @@ Incidentalmente, ele vive reclamando que os usuários dos programas dele
 não lêem as mensagens na tela...
 
 Mas é assim mesmo. Os usuários avançados usualmente pulam as instruções.
-Iniciantes não gostam mesmo de ler muito. E os poucos usuários que
-realmente tentam ler as instruções, muitas vezes acabam ficando ainda
-mais confusos depois de lê-las! Por isso, os textos que você põe na tela
-devem ser polidos para minimização. Substitua explicações por ações
-auto-explicativas. Dá mais trabalho fazer assim porque você precisa
-pensar mais para conseguir reduzir os textos, mas vale a pena. Menos é
-realmente mais.
+Iniciantes não gostam mesmo de ler muito. E os poucos usuários que realmente
+tentam ler as instruções, muitas vezes acabam ficando ainda mais confusos
+depois de lê-las! Por isso, os textos que você põe na tela devem ser polidos
+para minimização. Substitua explicações por ações auto-explicativas. Dá mais
+trabalho fazer assim porque você precisa pensar mais para conseguir reduzir os
+textos, mas vale a pena. **Menos é realmente mais.**
 
-Ok. Joel fala de várias outras coisas também, mas este texto está
-ficando grande demais, e você é um herói legendário tendo lido até aqui
-de qualquer forma, então, prometo que já-já vou terminar.
+Ok. Joel fala de várias outras coisas também, mas este texto está ficando
+grande demais, e você é um herói legendário tendo lido até aqui de qualquer
+forma, então, prometo que já-já vou terminar.
 
-Outra coisa que usuários também não são muito bons em fazer é controlar
-o mouse. Pois é, eles não controlam o mouse muito bem. Meus pais mesmo
-tiveram uma certa dificuldade de aprender o duplo clique. Certas tarefas
-são particularmente complicadas de fazer com o mouse. E às vezes, mesmo
-se o usuário sabe usar o mouse, ele não funciona muito bem. Eu mesmo
-cansei de xingar aplicações com barras de rolagem muito chatas, em que
-algumas tarefas simples viram um exercício de autocontrole pra não socar
-o monitor. E até hoje ainda tenho alguns medinhos sobre clicar e
-arrastar...
+Outra coisa que usuários também não são muito bons em fazer é controlar o
+mouse. Pois é, eles não controlam o mouse muito bem. Meus pais mesmo tiveram
+uma certa dificuldade de aprender o duplo clique. Certas tarefas são
+particularmente complicadas de fazer com o mouse. E às vezes, mesmo se o
+usuário sabe usar o mouse, ele não funciona muito bem. Eu mesmo cansei de
+xingar aplicações com barras de rolagem muito chatas, em que algumas tarefas
+simples viram um exercício de autocontrole pra não socar o monitor. E até hoje
+ainda tenho alguns medinhos sobre clicar e arrastar...
 
 Outra coisa a lembrar: Usuários não conseguem lembrar muita coisa.
-Praticamente, nadica! E é por isso que menus são melhores interfaces que
-linhas de comando crípticas. Por isso que escolher um arquivo de imagem
-selecionando uma miniatura da imagem é melhor do que procurar o nome do
-arquivo numa lista. E por isso que, mesmo quem jura que a linha de
-comando é uma interface melhor, não larga do autocompletar. :)
+Praticamente, nadica! E é por isso que menus são melhores interfaces que linhas
+de comando crípticas. Por isso que escolher um arquivo de imagem selecionando
+uma miniatura da imagem é melhor do que procurar o nome do arquivo numa lista.
+E por isso que, mesmo quem jura que a linha de comando é uma interface melhor,
+não larga do autocompletar. :)
 
-E ei, eu sou um que vivo na linha de comando, uso na grande maioria das
-minhas tarefas no PC. Mas não tem como negar que o Windows Explorer
-apresentando as pastas em árvore é uma metáfora *beeem* melhor para o
-sistema de arquivos. Eu na linha de comando é só eu na minha zona de
-conforto. Eu devia tentar usar mais a interface gráfica, mas...
+E ei, eu sou um que vivo na linha de comando, uso na grande maioria das minhas
+tarefas no PC. Mas não tem como negar que o Windows Explorer apresentando as
+pastas em árvore é uma metáfora *beeem* melhor para o sistema de arquivos. Eu
+na linha de comando é só eu na minha zona de conforto. Eu devia tentar usar
+mais a interface gráfica, mas...
 
-Ok, agora sim, estou finalizando! O que segue é provavelmente o ponto
-mais importante de todo esse texto.
+Ok, agora sim, estou finalizando! O que segue é provavelmente o ponto mais
+importante de todo esse texto.
 
-Alguém lendo este texto, pode achar que um princípio geral a ser seguido
-é: *“pense que seus usuários são muito burros”*, e talvez achar que essa
-seja uma atitude arrogante. Não muito, eu diria... *Uma arrogância muito
-pior é achar que o seu software é tão bom e bem-feito que as outras
-pessoas simplesmente devem se virar pra aprender a usá-lo*.
+Alguém lendo este texto, pode achar que um princípio geral a ser seguido é:
+*“pense que seus usuários são muito burros”*, e talvez achar que essa seja uma
+atitude arrogante. Não muito, eu diria... *Uma arrogância muito pior é achar
+que o seu software é tão bom e bem-feito que as outras pessoas simplesmente
+devem se virar pra aprender a usá-lo*.
 
 [![UI-usuarios-final](http://eljunior.files.wordpress.com/2013/03/ui-usuarios-final.png)](http://eljunior.files.wordpress.com/2013/03/ui-usuarios-final.png)
 
