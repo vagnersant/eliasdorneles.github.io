@@ -67,10 +67,10 @@ nessa brincadeira!
 Hã, esse não é bem um motivo, mas é uma reação esperada. E a resposta é:
 porque eu só tenho a ganhar.
 
-<span style="line-height:1.5;">Veja só, se você aprender shell-script e
+Veja só, se você aprender shell-script e
 conseguir otimizar sua vida um pouquinho, vai sobrar tempo pra você
 aprender ainda mais um pouquinho de shell-script e otimizar ainda mais e
-assim por diante, então a tendência é o mundo melhorar, ha-ha!</span>
+assim por diante, então a tendência é o mundo melhorar, ha-ha!
 
 Piadinhas à parte, a verdade é que aos poucos você vai começar a
 perceber que pode resolver um monte de problemas que antes você nem se
@@ -92,15 +92,12 @@ Unix](http://pt.wikipedia.org/wiki/Filosofia_Unix). *Thanks, [Mr.
 McIlroy](http://pt.wikipedia.org/wiki/Douglas_McIlroy), we’ve seen the
 light now*.
 
-<span style="line-height:1.5;">Um dos melhores investimentos do meu
-tempo na época que estava na faculdade foi ler boa parte
-do</span>[Advanced Bash Scripting
-Guide](http://www.tldp.org/LDP/abs/html/)<span
-style="line-height:1.5;">, quando um dos rapazes do laboratório imprimiu
-uma cópia em folha dupla e letra miúda pra ficar fácil de carregar. É
-meio comprido, mas é uma excelente fonte para aprender: é recheada de
-exemplos, ensina boas práticas e tem várias notas sobre
-portabilidade.</span>
+Um dos melhores investimentos do meu tempo na época que estava na faculdade foi
+ler boa parte do [Advanced Bash Scripting
+Guide](http://www.tldp.org/LDP/abs/html/), quando um dos rapazes do laboratório
+imprimiu uma cópia em folha dupla e letra miúda pra ficar fácil de carregar. É
+meio comprido, mas é uma excelente fonte para aprender: é recheada de exemplos,
+ensina boas práticas e tem várias notas sobre portabilidade.
 
 Mas se você não curte ler em inglês, não desanime. Pode [começar com a
 página do Aurélio](http://aurelio.net/shell/), que é como comecei
