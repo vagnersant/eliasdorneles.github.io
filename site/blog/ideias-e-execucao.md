@@ -37,42 +37,39 @@ pra fazer o trabalho braçal pra você, não teve apoio dos amigos, não
 teve incentivo do governo, e o que mais inventar o poderoso gerador de
 desculpas conhecido como cérebro humano.  
 
-  --------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Linus Pauling](http://upload.wikimedia.org/wikipedia/commons/5/58/L_Pauling.jpg "Linus Pauling")](http://pt.wikipedia.org/wiki/Linus_Pauling)
-  Linus Pauling, cientista superprodutivo
-  --------------------------------------------------------------------------------------------------------------------------------------------------
+<center>
+  [![Linus Pauling, cientista superprodutivo](http://upload.wikimedia.org/wikipedia/commons/5/58/L_Pauling.jpg "Linus Pauling")](http://pt.wikipedia.org/wiki/Linus_Pauling)
+</center>
 
 > Se você quer ter boas idéias, você precisa ter muitas idéias. A
 > maioria delas estarão erradas. O que você precisa aprender é quais
-> jogar fora. - Linus Pauling
+> jogar fora. - Linus Pauling, cientista superprodutivo
+
 
 Ward Cunningham, famoso pela [invenção do Wiki e de outras noções
 importantes](http://en.wikipedia.org/wiki/Ward_Cunningham#Ideas_and_inventions)
 que acabaram dando forma à indústria de software, é conhecido por viver
-[trocando idéias com os
-colegas](http://www.nagarro.com/blog/ward-cunningham/), e implementando
-uma ou outra [idéia bizarra](http://c2.com/ward/glory/) das suas. Ele
-sabe que o jeito de ter boas idéias é ter muitas idéias, inclusive
-ruins, e que o jeito de aprender quais jogar fora é discutindo-as e
-pondo-as em teste.
+[trocando idéias com os colegas](http://www.nagarro.com/blog/ward-cunningham/),
+e implementando uma ou outra [idéia bizarra](http://c2.com/ward/glory/) das
+suas. Ele sabe que o jeito de ter boas idéias é ter muitas idéias, inclusive
+ruins, e que o jeito de aprender quais jogar fora é discutindo-as e pondo-as em
+teste.
 
-[Idéias são apenas um multiplicador da
-execução](http://sivers.org/multiply). A execução não é uma “tarefa de
-pedreiro”, mas sim o fator que carrega maior peso no impacto de um
-produto. Se idéia tá na escala 1, execução está na escala 1000000. Uma
-idéia brilhante precisa também de uma execução brilhante pra virar
-sucesso.
+[Idéias são apenas um multiplicador da execução](http://sivers.org/multiply). A
+execução não é uma “tarefa de pedreiro”, mas sim o fator que carrega maior peso
+no impacto de um produto. Se idéia tá na escala 1, execução está na escala
+1000000. Uma idéia brilhante precisa também de uma execução brilhante pra virar
+         sucesso.
 
-É inútil ficar esperando ter uma grande idéia no momento certo, e é
-ridículo achar que a idéia sozinha já é grande coisa.
+É inútil ficar esperando ter uma grande idéia no momento certo, e é ridículo
+achar que a idéia sozinha já é grande coisa.
 
-Idéias são bonitas quando transmitidas, poderosas quando compreendidas,
-e impactantes quando vividas. Execute a sua. (Ou as suas. :)
+Idéias são bonitas quando transmitidas, poderosas quando compreendidas, e
+impactantes quando vividas. Execute a sua. (Ou as suas. :)
 
-Suje as mãos! Escreva seu livro, filme seu vídeo, implemente seu app,
-monte sua barraca de cachorro-quente. Você vai escrever muito lixo,
-filmar muita tosquice, fazer muitos protótipos horrendos, e seus
-primeiros cachorros provavelmente não serão aquela maravilha.  
-E talvez você não ganhe dinheiro.  
-Mas ahh... você vai aprender muita coisa com cada um desses
-cachorros-quentes, pode ter certeza!
+Suje as mãos! Escreva seu livro, filme seu vídeo, implemente seu app, monte sua
+barraca de cachorro-quente. Você vai escrever muito lixo, filmar muita
+tosquice, fazer muitos protótipos horrendos, e seus primeiros cachorros
+provavelmente não serão aquela maravilha.  E talvez você não ganhe dinheiro.
+Mas ahh... você vai aprender muita coisa com cada um desses cachorros-quentes,
+pode ter certeza!
