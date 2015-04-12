@@ -207,12 +207,10 @@ about bad developer UX...
 4. [Quando devo usar links e quando usar commandLinks?](http://stackoverflow.com/questions/4317684/when-should-i-use-houtputlink-instead-of-hcommandlink)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span style="line-height:1.5;">HTTP: GET vs POST.
-Navegação/favoritabilidade vs. ações do tipo altera/cria alguma coisa. A
-maioria dos desenvolvedores JSF levaram 10 anos para
-aprender</span>[quando usar GET vs
-POST](http://www.w3.org/2001/tag/doc/whenToUseGet.html)<span
-style="line-height:1.5;">. Alguns ainda não aprenderam...</span>  
+HTTP: GET vs POST.  Navegação/favoritabilidade vs. ações do tipo altera/cria
+alguma coisa. A maioria dos desenvolvedores JSF levaram 10 anos para aprender
+[quando usar GET vs POST](http://www.w3.org/2001/tag/doc/whenToUseGet.html).
+Alguns ainda não aprenderam...  
 
 5. [Como passar parâmetro para um commandLink dentro de um datatable?](http://stackoverflow.com/questions/4994458/how-can-i-pass-a-parameter-to-a-commandlink-inside-a-datatable)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
