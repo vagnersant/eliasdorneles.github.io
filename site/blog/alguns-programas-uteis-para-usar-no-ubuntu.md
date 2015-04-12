@@ -9,7 +9,7 @@ no [Ubuntu](http://www.ubuntu.com/ "Ubuntu Linux"). A maioria deles eu
 demorei um pouco para descobri-los, por isso acho uma boa idéia falar
 deles por aqui -- são aplicações bacanas que merecem uma boa propaganda.
 
-<span style="font-size: x-large;">Meld</span>
+### Meld
 
 [Meld](http://meldmerge.org/) é uma ferramenta muito útil para
 programadores, mas que pode muito bem ser útil para outras pessoas
@@ -17,10 +17,9 @@ também. Ele ajuda você a ver as diferenças entre versões diferentes de
 arquivos ou pastas, e permite copiar as coisas de um lado para outro e
 vice-versa.
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Comparando duas pastas com o Meld](http://eljunior.files.wordpress.com/2013/08/minha_pasta-outra_pasta-meld_004.png "Comparando duas pastas com o Meld")](http://eljunior.files.wordpress.com/2013/08/minha_pasta-outra_pasta-meld_004.png)
-  Comparando duas pastas com o Meld
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Comparando duas pastas com o Meld:
+
+[![Comparando duas pastas com o Meld](http://eljunior.files.wordpress.com/2013/08/minha_pasta-outra_pasta-meld_004.png "Comparando duas pastas com o Meld")](http://eljunior.files.wordpress.com/2013/08/minha_pasta-outra_pasta-meld_004.png)
 
 Ele é uma mão-na-roda para o desenvolvedor na hora de fazer
 *[merges](http://en.wikipedia.org/wiki/Merge_(revision_control) "Artigo sobre merges na Wikipedia")*
@@ -43,7 +42,8 @@ Para instalar no Ubuntu, digite num terminal:
 > tradicional do Linux, pra mim é meio surpreendente como muitos
 > *power-users* desconhecem esse truque.
 
-<span style="font-size: x-large;">Shutter</span>
+
+### Shutter
 
 [Shutter](http://shutter-project.org/) é um programa que ajuda a fazer
 capturas da tela, aka, *screenshots*. A maioria das pessoas está
@@ -52,10 +52,7 @@ Screen</kbd>, mas o legal do Shutter é que você pode escolher um pedaço
 específico da tela pra capturar, fazer alterações por cima, tudo no
 mesmo passo.
 
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Yo dawg, I heard you like taking screenshots!](http://eljunior.files.wordpress.com/2013/08/shutter-yo_dawg.png?w=640)](http://eljunior.files.wordpress.com/2013/08/shutter-yo_dawg.png)
-  Yo dawg, I heard you like taking screenshots!
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[![Yo dawg, I heard you like taking screenshots!](http://eljunior.files.wordpress.com/2013/08/shutter-yo_dawg.png?w=640)](http://eljunior.files.wordpress.com/2013/08/shutter-yo_dawg.png)
 
 Ele também tem plugins para aplicar efeitos nas imagens, fazer upload
 para ImgUr, TwitPic, ImageShack, Dropbox, etc.
@@ -64,7 +61,7 @@ Pra instalar no Ubuntu, digite num terminal:
 
 `sudo apt-get install shutter`
 
-<span style="font-size: x-large;">DBeaver</span>
+### DBeaver
 
 O [DBeaver](http://jkiss.org/) é uma aplicação cliente de banco de dados
 SQL, que suporta vários bancos e plataformas. Não é muito espetacular,
@@ -80,7 +77,7 @@ ainda, você também pode [instalar como
 plugin](http://marketplace.eclipse.org/node/507775) para o
 [Eclipse](http://www.eclipse.org/) se preferir.
 
-<span style="font-size: x-large;">PlayItSlowly</span>
+### PlayItSlowly
 
 O [PlayItSlowly](http://29a.ch/playitslowly/) é um programa muito legal
 que permite reproduzir arquivos de áudio ou vídeo em velocidade e
@@ -88,10 +85,7 @@ frequência diferentes do áudio/vídeo original, até [já andei falando
 antes sobre ele por
 aqui](http://eljunior.wordpress.com/2011/07/28/tocar-video-ou-musica-em-outra-velocidade-mantendo-o-tom/).
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [![Can you guess from which band is this song?](http://eljunior.files.wordpress.com/2013/08/play-it-slowly_012.png)](http://eljunior.files.wordpress.com/2013/08/play-it-slowly_012.png)
-  Can you guess from which band is this song?
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Usando o PlayItSlowly você pode fazer andar mais rápido o vídeo daquela
 palestra lenta que dá sono e também ouvir um trecho duma música
@@ -112,23 +106,19 @@ Caso esteja usando uma versão mais antiguinha, considere [baixar o
 pacote com a última versão do site](http://29a.ch/playitslowly/) --
 prometo que a interface melhora legal.
 
-<span style="font-size: x-large;">Amphetype</span>
+### Amphetype
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [![Amphetype: pratique digitação digitando e lendo seu texto preferido](http://eljunior.files.wordpress.com/2013/08/amphetype_001.png?w=640 "Tela inicial do Amphetype")](http://eljunior.files.wordpress.com/2013/08/amphetype_001.png)
-  Amphetype: pratique digitação digitando e lendo seu texto preferido
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Amphetype](http://code.google.com/p/amphetype/) é um programa pra
-treinar digitação com textos que você escolhe, que também gera umas
-estatísticas joiadas. Infelizmente, não está mais sendo mantido e acho
-que nunca teve um empacotamento de verdade pra Linux ([só tem instalador
-para Windows e
-Mac](https://code.google.com/p/amphetype/downloads/list "Instaladores do Amphetype para Windows e Mac")).
-Mesmo assim, continua sendo bem decente -- eu uso uma versão que
-modifiquei levemente para facilitar a deleção dos textos fontes. Um dia
-quem sabe eu tomo vergonha na cara e tento montar um pacote, publicar o
-*patch*, etc.
+[Amphetype](http://code.google.com/p/amphetype/) é um programa pra treinar
+digitação com textos que você escolhe, que também gera umas estatísticas
+joiadas. Infelizmente, não está mais sendo mantido e acho que nunca teve um
+empacotamento de verdade pra Linux ([só tem instalador para Windows e
+Mac](https://code.google.com/p/amphetype/downloads/list "Instaladores do
+Amphetype para Windows e Mac")).  Mesmo assim, continua sendo bem decente -- eu
+uso uma versão que modifiquei levemente para facilitar a deleção dos textos
+fontes. Um dia quem sabe eu tomo vergonha na cara e tento montar um pacote,
+publicar o *patch*, etc.
 
 Como falei, não tem um empacotamento pronto pra Linux, mas você consegue
 rodar baixando o código-fonte, usando alguns comandos no terminal:
@@ -140,7 +130,7 @@ rodar baixando o código-fonte, usando alguns comandos no terminal:
 3.  Execute o programa com o comando:  
    `python Amphetype.py`
 
-<span style="font-size: x-large;">Pinta</span>
+### Pinta
 
 O Pinta é um programa muito bem feitinho, pra editar imagens no estilo
 do MS Paint -- uma coisa que demorou um pouquinho pra aparecer no Linux.
@@ -148,17 +138,14 @@ Um recurso legal dele é o *“Recolor”*, que pinta apenas em cima de uma
 determinada cor. Funciona como aquelas canetas marca-texto, permitindo
 chamar atenção para textos em outras imagens como nesse exemplo:
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [![É divertido pintar com o Pinta =)](http://eljunior.files.wordpress.com/2013/08/diffusionofinnovation-pinta_003.png?w=640)](http://eljunior.files.wordpress.com/2013/08/diffusionofinnovation-pinta_003.png)
   É divertido pintar com o Pinta =)
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Instale no Ubuntu digitando num terminal:
 
 `sudo apt-get install pinta`
 
-<span style="font-size: x-large;">Programas para usar na linha de
-comando</span>
+### Programas para usar na linha de comando
 
 Além desses programas, gostaria ainda de falar rapidão de outros
 programas úteis pra quem também gosta de usar a linha de comando:
@@ -178,4 +165,3 @@ programas úteis pra quem também gosta de usar a linha de comando:
     árvore. Por algum motivo, levei anos pra descobrir que esse programa
     existia. Instale com:  
    `sudo apt-get install tree`
-
