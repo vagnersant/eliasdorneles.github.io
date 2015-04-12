@@ -31,7 +31,6 @@ isso, o cursor do mouse se transformará em um X, e você pode clicar na
 janela com problema para matar o processo, ou clicar com o direito em
 qualquer lugar para voltar o mouse ao normal.
 
-<p>
 Quando comandos rodando num terminal param de responder, geralmente eles
 podem ser parados com as combinações <kbd>Ctrl</kbd> + <kbd>C</kbd> ou
 <kbd>Ctrl</kbd> + <kbd>/</kbd>. Se nenhum funcionar, você pode abrir
@@ -41,9 +40,10 @@ para matar "na mão", usando `ps ax | grep COMANDO` onde COMANDO é o nome
 do programa que não está respondendo. Isso deve resultar numa saída
 parecida com essa:  
 
-    $ ps ax | grep firefox 2110 ?        Sl    30:32 /usr/lib/firefox/firefox 2192 ?        Sl    21:19 /usr/lib/firefox/plugin-container /usr/lib/flashplugin-installer/libflashplayer.so -greomni /usr/lib/firefox/omni.ja 2110 true plugin 4584 pts/0    S+     0:00 grep --color=auto firefox
-
-</code>
+    $ ps ax | grep firefox
+    2110 ?        Sl    30:32 /usr/lib/firefox/firefox
+    2192 ?        Sl    21:19 /usr/lib/firefox/plugin-container /usr/lib/flashplugin-installer/libflashplayer.so -greomni /usr/lib/firefox/omni.ja
+    2110 true plugin 4584 pts/0    S+     0:00 grep --color=auto firefox
 
 O primeiro campo de cada linha é o número do processo (PID, de *Process
 ID*) dos programas que o `grep` encontrou na busca (você pode ignorar o
@@ -87,9 +87,13 @@ comentários do meu amigo: enquanto mantém pressionadas as teclas
 <kbd>B</kbd>. Esses comandos são reconhecidos pelo kernel Linux, que
 executam as operações:
 
-    unRaw      (recupera o controle do teclado), tErminate (envia o sinal SIGTERM a todos os processos,                      permitindo que terminem graciosamente), kIll      (envia o sinal SIGKILL para todos os processos,                      forçando-os a terminar imediatamente), Sync     (sincroniza dados do sistema de arquivos com o disco), Unmount  (remonta todos os arquivos em modo somente leitura),reBoot.    (reinicia o sistema)
+- un**R**aw:      recupera o controle do teclado,
+- t**E**rminate:  envia o sinal SIGTERM a todos os processos, permitindo que terminem graciosamente,
+- k**I**ll:      envia o sinal SIGKILL para todos os processos, forçando-os a terminar imediatamente,
+- **S**ync:     sincroniza dados do sistema de arquivos com o disco,
+- **U**nmount:  remonta todos os arquivos em modo somente leitura,
+- re**B**oot:    reinicia o sistema
 
-~**Nota:**\\ Na\\ época\\ que\\ aprendi\\ essa\\ sequência\\ de\\ comandos,\\ lembro\\ que\\ me\\ ajudou\\ a\\ decorar\\ como\\ "BUSIER"\\ ao\\ contrário...~
+> **Nota:** Na época que aprendi essa sequência de comandos, lembro que me ajudou a decorar como *BUSIER* ao contrário...
 
-Se isso não funcionar, então está na hora de reiniciar o computador no
-dedão!
+Se isso não funcionar, então está na hora de reiniciar o computador no dedão!
