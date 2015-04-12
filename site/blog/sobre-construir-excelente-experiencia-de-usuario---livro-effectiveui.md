@@ -18,13 +18,17 @@ UX, e o livro é baseado principalmente na experiência deles. Nunca tinha
 ouvido falar da empresa antes, mas se a
 [O'Reilly](http://oreilly.com/ "oreilly.com") pediu pra eles escreverem
 o livro, imagino que eles devem saber do que estão falando. :)  
+
+<center>
 [![](http://akamaicovers.oreilly.com/images/9780596154790/cat.gif "EffectiveUI - livro")](http://shop.oreilly.com/product/9780596154790.do)
+</center>
+
 Ele trata do assunto: *"como fazer um projeto de software de qualidade,
 considerando a experiência do usuário -- UX (User eXperience)"*. Quando
 me recomendaram esse livro, pensei que trataria de alguns princípios
 básicos de interface e que talvez tivesse algumas receitas de bolo para
 serem aplicadas no desenho de interfaces na prática. Todavia, um projeto
-de experiência do usuário^\*^ envolve muito mais do que questões de
+de experiência do usuário [1] envolve muito mais do que questões de
 leiaute, tamanhos e tipografia. De acordo com os autores, para fazer
 softwares que estimulem o envolvimento do usuário e ajudem-no a fazer
 suas tarefas, é necessário construir um certo clima desde o começo do
@@ -34,7 +38,7 @@ livro também é sobre como escapar das armadilhas que causam a maioria
 dos softwares serem muito ruins de usar, e que fazem projetos
 fracassarem antes de você ouvir falar deles.
 
-~\*\\ minha\\ tradução\\ para\\ [User\\ experience\\ design](http://en.wikipedia.org/wiki/User_experience_design),\\ não\\ sei\\ se\\ existe\\ termo\\ melhor.~
+> [1]: minha tradução para [User experience design](http://en.wikipedia.org/wiki/User_experience_design), não sei se existe termo melhor.
 
 Boa parte dos conselhos do livro são diretamente aplicáveis para pessoas
 envolvidas com liderança de projetos, mas o conteúdo interessa qualquer
