@@ -3,34 +3,31 @@ Date: 2011-12-11 23:12
 Author: elias
 Slug: Aprendendo-Thumbpicking
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![](http://eljunior.files.wordpress.com/2011/12/ahogado.png?w=300 "tocando violao no monumento al ahogado")](http://eljunior.files.wordpress.com/2011/12/ahogado.png)
-  Um thumbpicker fominha em Punta del Este.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<center>
+  [![](http://eljunior.files.wordpress.com/2011/12/ahogado.png?w=300 "Eu, fominha, tocando violão em Punta del Este")](http://eljunior.files.wordpress.com/2011/12/ahogado.png)
+</center>
 
-> **  
-> UPDATE:** atualizei os links pra download dos MP3, porque estouraram
+> **UPDATE:** atualizei os links pra download dos MP3, porque estouraram
 > os limites do SoundCloud.
 
 Já faz uns 3 anos que comecei a tocar no violão o estilo conhecido como
-*thumbpicking* (alguns também chamam de *fingerpicking*, embora [esse
-termo parece ser mais
-genérico](http://en.wikipedia.org/wiki/Fingerstyle_guitar "Página da Wikipedia em inglês sobre violão fingerstyle")).
+*thumbpicking* (alguns também chamam de *fingerpicking*, embora [esse termo
+parece ser mais genérico](http://en.wikipedia.org/wiki/Fingerstyle_guitar
+"Página da Wikipedia em inglês sobre violão fingerstyle")).
 
-Desde piá eu já tocava um pouco de violão e teclado, e sempre tive
-vontade de tentar emular no violão o que conseguia no teclado: tocar a
-melodia ao mesmo tempo que a base. A primeira vez que vi isso ser feito
-de verdade, sem deixar nada sobrando, foi há mais ou menos uns 3 anos
-atrás, quando vi [um
-vídeo](http://www.youtube.com/watch?v=AhR04kmcSXU "Tommy Emmanuel tocando Angelina")
-do [Tommy
-Emmanuel](http://www.tommyemmanuel.com/ "Tommy Emmanuel - Site Oficial")
-no Youtube.
+Desde piá eu já tocava um pouco de violão e teclado, e sempre tive vontade de
+tentar emular no violão o que conseguia no teclado: tocar a melodia ao mesmo
+tempo que a base. A primeira vez que vi isso ser feito de verdade, sem deixar
+nada sobrando, foi há mais ou menos uns 3 anos atrás, quando vi [um
+vídeo](http://www.youtube.com/watch?v=AhR04kmcSXU "Tommy Emmanuel tocando
+Angelina") do [Tommy Emmanuel](http://www.tommyemmanuel.com/ "Tommy Emmanuel -
+Site Oficial") no Youtube.
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  <span style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto;">[![Tommy Emmanuel](http://farm5.staticflickr.com/4012/4224141072_f706c5452f.jpg)](http://www.flickr.com/photos/zanastardust/4224141072/)</span>
+<center>
+  [![Tommy Emmanuel](http://farm5.staticflickr.com/4012/4224141072_f706c5452f.jpg)](http://www.flickr.com/photos/zanastardust/4224141072/)
+
   [Tommy Emmanuel em algum show fenomenal por aí..!](http://www.flickr.com/photos/zanastardust/4224141072/)
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</center>
 
 Se você gosta de violão/guitarra, e ainda não conhece o nome Tommy
 Emmanuel, pare de ler esse texto agora mesmo e vá catar alguns vídeos do
@@ -56,10 +53,11 @@ parada mesmo, basicamente, a partir dessa [pequena lição do próprio
 Tommy](http://www.youtube.com/watch?v=YoqG7PO-MHs "Tommy Emmanuel dando lição de violão"):
 <http://www.youtube.com/watch?v=YoqG7PO-MHs>
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<center>
   [![Tommy Emmanuel fazendo palhaçada pra gente](http://eljunior.files.wordpress.com/2011/12/dsc05668.jpg?w=300 "Tommy Emmanuel fazendo palhaçada pra gente")](http://eljunior.files.wordpress.com/2011/12/dsc05668.jpg)
-  Tommy fazendo uma das suas, e eu felizão assistindo...
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  Tommy fazendo graça, e eu felizão assistindo...
+</center>
 
 Nesse vídeo ele conta, entre outras coisas, de quando ele ouviu no rádio
 pela primeira vez Chet Atkins tocando a melodia, o baixo e o ritmo, tudo
@@ -75,15 +73,12 @@ Meu objetivo é tentar passar essas mesmas idéias aqui, no nosso bom
 português, pra quem também quer aprender esse jeito de tocar. Então,
 vamos lá!
 
-<div style="padding-left: 30px;">
+> **Nota:** No fim do post, está uma lista com os links para todos os
+> exercícios propostos (áudios & tablaturas), assim você pode baixar e
+> estudar com calma. As tablaturas são meramente uma ajuda pra quem achar
+> mais fácil assim. Se você já toca "por ouvido" e não manja tablaturas,
+> nem esquente a cabeça e vá pelo áudio mesmo.
 
-**Nota:** No fim do post, está uma lista com os links para todos os
-exercícios propostos (áudios & tablaturas), assim você pode baixar e
-estudar com calma. As tablaturas são meramente uma ajuda pra quem achar
-mais fácil assim. Se você já toca "por ouvido" e não manja tablaturas,
-nem esquente a cabeça e vá pelo áudio mesmo.
-
-</div>
 
 **Baixo alternado**
 
@@ -382,12 +377,9 @@ Your browser does not support this audio
 [Baixar MP3 - Windy and
 Warm](https://googledrive.com/host/0B5Aeqmaq5y1MSTVNOXUtb0t0WnM/08-exemplo-windy_and_warm.mp3 "Baixar MP3 - Windy and Warm")
 
-<div style="padding-left: 30px;">
 
-Não deixe de conferir as versões de Windy & Warm de Tommy e Chet no
-Youtube. Só do Tommy tem várias versões, uma melhor que a outra...
-
-</div>
+> Não deixe de conferir as versões de Windy & Warm de Tommy e Chet no
+> Youtube. Só do Tommy tem várias versões, uma melhor que a outra...
 
 E aprenda mais músicas. Dizem que músicas são os melhores professores.
 Copie as versões dos outros, faça as suas versões.
@@ -415,14 +407,16 @@ deixe um comentário ou mande um email, que responderei assim que puder.
 
 **Lista dos exercícios dessa lição:**
 
-Os arquivos de áudio ~~estão publicados [num
-*set*](http://soundcloud.com/eliasdorneles/sets/aprendendo-thumbpicking-1 "Aprendendo Thumbpicking - Soundcloud - eliasdorneles")
-do [SoundCloud](http://soundcloud.com/ "SoundCloud - Share Your Sounds")~~.
-O SoundCloud desativou os downloads para os MP3 porque estouraram os
-limites, então movi os arquivos para [um folder no Google
-Drive](https://googledrive.com/host/0B5Aeqmaq5y1MSTVNOXUtb0t0WnM/ "Folder no Google Drive com todos os MP3").
+Os arquivos de áudio estão publicados [num
+*set*](http://soundcloud.com/eliasdorneles/sets/aprendendo-thumbpicking-1
+"Aprendendo Thumbpicking - Soundcloud - eliasdorneles")
+do [SoundCloud](http://soundcloud.com/ "SoundCloud - Share Your Sounds").  O
+SoundCloud desativou os downloads para os MP3 porque estouraram os limites,
+então movi os arquivos para [um folder no Google
+Drive](https://googledrive.com/host/0B5Aeqmaq5y1MSTVNOXUtb0t0WnM/ "Folder no
+Google Drive com todos os MP3").
 
-E as tablaturas estão aqui no blog mesmo:
+E as tablaturas estão aqui:
 
 1.  [Baixo
     Alternado](http://eljunior.files.wordpress.com/2011/12/01-baixo_alternado.pdf)
