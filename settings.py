@@ -16,3 +16,5 @@ AUTHOR_SAVE_AS = ''
 TIMEZONE = 'America/Sao_Paulo'
 
 GITHUB_URL = 'https://github.com/eliasdorneles'
+
+DISQUS_SITENAME = 'hopefulramble'
