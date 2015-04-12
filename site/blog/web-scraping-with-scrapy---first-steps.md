@@ -152,10 +152,10 @@ The `start_requests()` method must return an
 [scrapy.Request](http://doc.scrapy.org/en/latest/topics/request-response.html)
 objects, which represent an HTTP request to be made by the framework (these
 contain data like URL, parameters, cookies, etc) and define a function to be
-called when the request is complete -- acallback.
+called when the request is complete -- a callback.
 
   **Note:** if you are familiar with implementing AJAX in JavaScript, this way of
-  work dispatching requests and registeringcallbacks may sound familiar.
+  work dispatching requests and registering callbacks may sound familiar.
 
 
 In our example, we return a simple list of requests to Google and Yahoo
@@ -307,10 +307,10 @@ the following:
     import scrapy
 
     class Product(scrapy.Item)
-        description= scrapy.Field()
-        price= scrapy.Field()
-        brand= scrapy.Field()
-        category= scrapy.Field()
+        description = scrapy.Field()
+        price = scrapy.Field()
+        brand = scrapy.Field()
+        category = scrapy.Field()
 
 
 As you can see, the item classes are just subclasses
