@@ -18,7 +18,7 @@ later.
 ### About Git:
 
 
-You can use the `git rev-list HEA`  command to get a list of commits in the
+You can use the `git rev-list HEAD`  command to get a list of commits in the
 current branch. This is useful for writing scripts to report something about
 each commit in the repo.  You can, for example, check the evolution of line
 counts over the course of the project (or any other statistic like number of
