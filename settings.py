@@ -17,4 +17,8 @@ TIMEZONE = 'America/Sao_Paulo'
 
 GITHUB_URL = 'https://github.com/eliasdorneles'
 
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
+
+ARCHIVES_URL = 'archives.html'
+
 # DISQUS_SITENAME = 'hopefulramble'
