@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 SITE_DIR := site
-THEME := ./mytheme
+THEME_DIR := ./mytheme
 
 .PHONY: clean compile
 
@@ -15,7 +15,7 @@ help:
 	@echo compile - generate site in output dir
 
 compile:
-	pelican ${SITE_DIR} -t ${THEME} -o output -s settings.py
+	pelican ${SITE_DIR} -t ${THEME_DIR} -o output -s settings.py
 
 publish: clean compile
 	ghp-import -m "Update site" output
@@ -30,4 +30,4 @@ server: clean compile
 
 watch: compile
 	@echo Watching for changes...
-	watchmedo shell-command --command 'make compile' --recursive $(SITE_DIR)
+	watchmedo shell-command --command 'make compile' --recursive --drop ${SITE_DIR} ${THEME_DIR}
