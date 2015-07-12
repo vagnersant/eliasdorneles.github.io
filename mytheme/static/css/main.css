@@ -53,3 +53,8 @@ nav ul li {
 #sidebar {
     display: none;
 }
+
+hr {
+    margin-top: 30px;
+    color: #ccc;
+}
