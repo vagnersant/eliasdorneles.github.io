@@ -1,0 +1,55 @@
+@import url('http://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+@import url("pygments.css");
+
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    font: 16px arial, sans-serif;
+    color: #111;
+    background-color: #fafafa;
+}
+
+a, a:hover, a:visited {
+    color: #101087;
+}
+
+#banner h1 {
+    font-family: Covered By Your Grace;
+    font-size: 50px;
+}
+
+h1.entry-title {
+    font-size: 1.25em;
+    color: #811 !important;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #811 !important;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.highlight pre {
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 10px;
+
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+#sidebar {
+    display: none;
+}

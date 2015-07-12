@@ -1,5 +1,8 @@
 SHELL := /bin/bash
 SITE_DIR := site
+THEME := ./mytheme
+
+.PHONY: clean compile
 
 help:
 	@echo To edit, run make server in one tab and make watch in another
@@ -12,7 +15,7 @@ help:
 	@echo compile - generate site in output dir
 
 compile:
-	pelican ${SITE_DIR} -o output -s settings.py
+	pelican ${SITE_DIR} -t ${THEME} -o output -s settings.py
 
 publish: clean compile
 	ghp-import -m "Update site" output
@@ -20,7 +23,7 @@ publish: clean compile
 	git push origin source:source
 
 clean:
-	rm -rf output cache
+	rm -rf output/* cache
 
 server: clean compile
 	(cd output && python -m webbrowser http://localhost:8000 && python -m SimpleHTTPServer)
