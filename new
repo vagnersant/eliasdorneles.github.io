@@ -21,7 +21,10 @@ POSTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'site', 'bl
 
 
 def run(args):
-    title = raw_input('Title: ')
+    try:
+        title = raw_input('Title: ')
+    except KeyboardInterrupt:
+        return
 
     if not title:
         print('No title given, giving up')
