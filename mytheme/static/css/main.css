@@ -60,14 +60,13 @@ a, a:hover, a:visited {
     font-size: 50px;
 }
 
-h1.entry-title {
-    font-size: 1.25em;
+h1 a, h1 {
+    text-decoration: none;
     color: #811 !important;
 }
 
-h1 a {
-    text-decoration: none;
-    color: #811 !important;
+h1.entry-title {
+    font-size: 1.5em;
 }
 
 nav ul {
@@ -100,6 +99,15 @@ hr {
 
 img {
     max-width: 100%;
+}
+
+dl a, dl a:visited, dl a:hover {
+    color: #811;
+    text-decoration: none;
+}
+
+dd {
+	margin-bottom: 20px;
 }
 
 .footer-menu {
