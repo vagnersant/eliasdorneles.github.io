@@ -7,7 +7,7 @@ I'm Elias Dorneles, programmer, musician and learning addict.
 <a href="/">Hopeful Ramble</a> is a place to share stuff I learn, my ramblings
 and whatnot.
 
-Find me on <a href="http://twitter.com/eliasdorneles">Twitter</a>.
+Find me on <a href="//twitter.com/eliasdorneles">Twitter</a> and <a href="//github.com/eliasdorneles">GitHub</a>.
 
 <a href="http://stackexchange.com/users/50263">
-<img src="http://stackexchange.com/users/flair/50263.png" width="208" height="58" alt="profile for eljunior on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for eljunior on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+<img src="http://stackexchange.com/users/flair/50263.png?theme=clean" width="208" height="58" alt="profile for elias on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for elias on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
