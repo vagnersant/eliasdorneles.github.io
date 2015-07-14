@@ -26,11 +26,10 @@ tests, number of files, etc). You can also run the tests for every commit in
 the history:
 
 
+    :::shell
     git rev-list HEAD | while read rev; do
        git checkout $rev && git clean-fd && make test
     done
-
-
 
 
 Gary has a script ready for this:

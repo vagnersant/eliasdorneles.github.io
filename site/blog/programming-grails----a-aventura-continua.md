@@ -56,6 +56,7 @@ numa classe de domínio.
 
 Segue um exemplo pra ajudar a entender:
 
+    :::groovy
     class OutraClasse {
         def metodoDaOutraClasse() {
             println "metodoDaOutraClasse()"
@@ -275,6 +276,7 @@ precisa ficar ligado:
 GSP, no *Config.groovy*:
 
 
+    :::groovy
     grails.views.default.codec = 'html'
 
 
