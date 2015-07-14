@@ -1,10 +1,51 @@
 @import url('//fonts.googleapis.com/css?family=Covered+By+Your+Grace');
 @import url("pygments.css");
 
+@media all and (min-width: 800px) {
+    body {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .highlight pre {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+@media all and (min-width: 600px) and (max-width:799px) {
+    body {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .highlight pre {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+@media all and (min-width: 400px) and (max-width:599px) {
+    body {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .highlight pre {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}
+
+@media all and (max-width:399px) {
+    body {
+        width: 340px;
+        margin: 0 auto;
+    }
+    .highlight pre {
+        font-size: 0.6em;
+        padding: 2px;
+    }
+}
 
 body {
-    width: 800px;
-    margin: 0 auto;
     font: 16px arial, sans-serif;
     color: #111;
     background-color: #fafafa;
@@ -40,10 +81,8 @@ nav ul li {
 }
 
 .highlight pre {
-    font-size: 0.9em;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    padding: 10px;
 
     white-space: pre-wrap;
     word-break: break-all;
@@ -57,4 +96,8 @@ nav ul li {
 hr {
     margin-top: 30px;
     color: #ccc;
+}
+
+img {
+    max-width: 100%;
 }
