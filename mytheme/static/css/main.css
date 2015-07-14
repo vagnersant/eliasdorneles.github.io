@@ -101,15 +101,6 @@ img {
     max-width: 100%;
 }
 
-dl a, dl a:visited, dl a:hover {
-    color: #811;
-    text-decoration: none;
-}
-
-dd {
-	margin-bottom: 20px;
-}
-
 .footer-menu {
     padding: 10px;
 }
