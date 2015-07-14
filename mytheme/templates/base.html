@@ -24,6 +24,7 @@
 </head>
 
 <body id="index" class="home">
+    <a name="top"></a>
 {% include 'github.html' %}
         <header id="banner" class="body">
                 <h1><a href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
@@ -85,8 +86,8 @@
         </aside><!-- /#sidebar -->
 
         <hr />
-        <footer>
-            <a href="/">Back to the start</a>
+        <footer class="footer-menu">
+            <a href="#top">Back to the top</a>
         </footer>
 
 {% include 'analytics.html' %}

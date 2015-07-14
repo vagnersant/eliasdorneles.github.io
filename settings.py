@@ -9,6 +9,7 @@ ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{name}.html'
 
 ARTICLE_SAVE_AS = ARTICLE_URL
 
+MENUITEMS = [('Home', '')]
 
 # I'm the only author
 AUTHOR_SAVE_AS = ''

@@ -101,3 +101,7 @@ hr {
 img {
     max-width: 100%;
 }
+
+.footer-menu {
+    padding: 10px;
+}
