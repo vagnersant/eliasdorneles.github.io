@@ -27,7 +27,7 @@ the command line. Well, maybe you're smiling to yourself because you already
 know about [awk](http://en.wikipedia.org/wiki/AWK), and you use it all the time
 for this kind of stuff doing something like:  
 
-    $ cat myfile.txt| awk'{ print $3 }'
+    $ cat myfile.txt | awk'{ print $3 }'
     amelia.zodiacusque@gmail.com
     julie.perscrutabor@skeeve.com
 
@@ -41,13 +41,13 @@ somewhere in your $PATH. After that, next time you find yourself in this
 situation you'll do:
 
 
-    $ cat myfile.txt| fields 1
+    $ cat myfile.txt | fields 1
     Amelia
     Julie
-    $ cat myfile.txt| fields 2
+    $ cat myfile.txt | fields 2
     555-5553
     555-6699
-    $ cat myfile.txt| fields 2 3
+    $ cat myfile.txt | fields 2 3
     555-5553amelia.zodiacusque@gmail.com
     555-6699julie.perscrutabor@skeeve.com
 
@@ -67,12 +67,12 @@ its own](https://github.com/eliasdorneles/dotfiles/raw/master/bin/total_sum):
     # Report sum of numbers fed to the stdin
     
     awk'{ total+=$1 } END { print total }'
-    $ echo-e"1\n2\n3\n4"
+    $ echo -e "1\n2\n3\n4"
     1
     2
     3
     4
-    $ echo-e"1\n2\n3\n4"| total_sum
+    $ echo -e "1\n2\n3\n4"| total_sum
     10
 
 
@@ -93,20 +93,20 @@ Look how pleasant it is to use it:
 
     $ humanize 32432
     32.4 kB
-    $ echo-e"10\n1200\n54356\n3123342\n3294384948"> some_file.txt
+    $ echo -e "10\n1200\n54356\n3123342\n3294384948" > some_file.txt
     $ cat some_file.txt
     10
     1200
     54356
     3123342
     3294384948
-    $ cat some_file.txt| humanize
+    $ cat some_file.txt | humanize
     10 Bytes
     1.2 kB
     54.4 kB
     3.1 MB
     3.3 GB
-    $ cat some_file.txt| humanize--binary
+    $ cat some_file.txt | humanize--binary
     10 Bytes
     1.2 KiB
     53.1 KiB

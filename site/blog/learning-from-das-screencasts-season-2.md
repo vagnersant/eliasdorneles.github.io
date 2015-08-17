@@ -66,9 +66,9 @@ The thing about Vim is that it feels like practicing a sport or playing an
 instrument, you can often do edit work with your eyes closed.
 
 In another episode Gary builds a command-line to look at evolution of the
-execution time of the tests, and then demonstrates using git bisect to find out
-which change was responsible for a nice performance boost. He used a few tricks
-which I thought were pretty neat. 
+execution time of the test suite, and then demonstrates using `git bisect` to
+find out which change was responsible for a nice performance boost. He used a
+few tricks which I thought were pretty neat. 
 
 First trick was, while building a command line for a long list of commits, he
 used awk to filter the input to get only every 50th line, before getting the
@@ -124,7 +124,7 @@ without tests in a sort of exploratory way, usually to get an understanding of
 what’s possible, and then throw it away and restart from the beginning writing
 tests first.
 
-Garry demonstrates the idea of doing [continuous
+Gary demonstrates the idea of doing [continuous
 spiking](https://www.destroyallsoftware.com/screencasts/catalog/spiking-and-continuous-spiking),
 where instead of throwing all the code away you’d transition it in a TDD-style
 manner, as you write tests for it. (He shows another example of this later in
