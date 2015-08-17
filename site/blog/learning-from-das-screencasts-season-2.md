@@ -14,7 +14,7 @@ step of the way. This becomes common sense pretty quickly after you acquire the
 habit of doing this kind of thing for a while.
 
 For example, say you want to remove the untracked files from a git repo.
-Instead of trying to write all of this all in one go:
+Instead of trying to write all of this in one go:
 
     $ git status -s | grep '??' | awk '{ print $2 }' | xargs rm -f
 
@@ -80,10 +80,10 @@ I can see myself using this in the future, it’s a good way of previewing the r
 
 The other trick I liked was getting a quick histogram in the command-line using
 [a command utility called jot](http://www.unix.com/man-page/freebsd/1/jot/)
-present in his Mac and other BSD systems. The `jot` command is pretty similar to
-seq in Linux-based distros, only it allows to print a string repeatedly (`-b`
-argument) while `seq` does not allow printing things other than numbers. This is
-nice, because you can do things like this:
+present in Mac OS X and other BSD based systems. The `jot` command is pretty
+similar to seq in Linux-based distros, only it allows to print a string
+repeatedly (`-b` argument) while `seq` does not allow printing things other
+than numbers. This is nice, because you can do things like this:
 
     $ jot -s '' -b'#' 10
     ##########
@@ -109,7 +109,7 @@ same thing in Linux using python:
     ################## 18
     ################ 16
 
-There is [a bunch of other ways of doing it in the shell
+There are [a bunch of other ways of doing it in the shell
 itself](http://superuser.com/questions/86340/linux-command-to-repeat-a-string-n-times),
 but I like the conciseness and readability of this one.
 
@@ -124,7 +124,7 @@ without tests in a sort of exploratory way, usually to get an understanding of
 what’s possible, and then throw it away and restart from the beginning writing
 tests first.
 
-Garry talks about the idea of doing [continuous
+Garry demonstrates the idea of doing [continuous
 spiking](https://www.destroyallsoftware.com/screencasts/catalog/spiking-and-continuous-spiking),
 where instead of throwing all the code away you’d transition it in a TDD-style
 manner, as you write tests for it. (He shows another example of this later in
@@ -137,12 +137,12 @@ so you’ll not be driving the design in a test-driven manner.
 This probably sounds a bit extreme to some, but the reasoning is that you will
 miss some design insights when you’re not putting yourself in the shoes of the
 user. It makes sense to me, even though I confess I often do not work that hard
-to do test driven design.
+to do test driven design as I'd want to.
 
 There was a nice video about test stubs making the distinction between
 incidental interaction vs essential interaction and the relation to using a
 normal stub (a dummy for an incidental interaction) vs a null object stub (aka
-mocks, when you assert on methods, checking an essential interaction). Testing
+mocks, when you assert on methods, checking essential interactions). Testing
 a module mixin may be a special case, you can mixin directly in the stub for
 simpler testing.
 
@@ -158,7 +158,7 @@ more directly what went wrong.
 # Refactoring in a codebase new to you
 
 There are two episodes quite interesting to watch, where Gary refactors out a
-Rails controller without much previous knowledge around the code.
+Rails controller without much previous knowledge about the code.
 
 I find it hard to write about it, it seems to be the kind of thing for which
 video is the best vehicle because it's hard to talk about it using words alone,
@@ -169,9 +169,9 @@ thing every once in a while.
 
 # Acceptance tests
 
-In a video about acceptance tests, Gary shows usage of
+In a video about acceptance tests, Gary shows the usage of
 [Cucumber](https://cucumber.io/) for testing a Rails application, using a
-browser engine to simulate user actions and a few tricks he use to make it run
+browser engine to simulate user actions and a few tricks he uses to make it run
 fast (20 scenarios with 104 tests in total, finish under ten seconds). I don’t
 have much experience with [acceptance test-driven
 development](https://en.wikipedia.org/wiki/Acceptance_test-driven_development),
