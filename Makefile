@@ -19,7 +19,7 @@ compile:
 
 publish: clean compile
 	ghp-import -m "Update site" output
-	git push origin gh-pages:master
+	git push -f origin gh-pages:master
 	git push origin source:source
 
 clean:
