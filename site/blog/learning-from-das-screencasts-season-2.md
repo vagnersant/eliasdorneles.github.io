@@ -3,6 +3,9 @@ Date: 2015-08-17 01:41
 Author: elias
 Slug: learning-from-das-screencasts-season-2
 
+These are my notes for [season 2 of Destroy All Software
+screencasts](https://www.destroyallsoftware.com/screencasts/catalog).
+
 # The command line, Unix, git and Vim
 
 In the first episode Gary teaches how to compose a complex Unix command line:
