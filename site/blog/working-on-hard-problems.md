@@ -8,8 +8,8 @@ solve, and tend to avoid hard ones that don't have a straightforward solution.
 Sure we like to think that we love a challenge, but given the choice of
 something easy to solve and another that requires thinking more deeply, one
 will choose to work in the easy one -- regardless of which one is more
-important. We're biased to tools and techniques we already know and solutions
-we are more comfortable with, we favor solutions we don’t need to think much.
+important. We're biased to tools and techniques we already know and are comfortable
+with, we favor solutions we don’t need to think much.
 
 <center>
 <img src="/images/easy-solution.jpg" alt="a Rubik's cube painted to look solved"
