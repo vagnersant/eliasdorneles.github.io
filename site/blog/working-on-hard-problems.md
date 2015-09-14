@@ -34,7 +34,7 @@ Now, what if these hard problems are really the important ones? How do we
 decide if they’re really important? What can we do about this natural tendency
 of avoiding them? What can you do to make yourself more willing to at least
 attempt to solve them? I’ve been thinking about this lately, and I don’t really
-have an answer.
+have a straight answer.
 
 I suppose it has a bit to do with attitude, a feeling that it will be worth to
 give it a try even if you don’t succeed. I suspect the fear of failure is big
