@@ -58,7 +58,7 @@ problems, and seek to understand which are the sources of anxiety, what are the
 risks and fears involved. Hopefully this will help us to see more clearly and
 make better decisions about what we should be working on. Because it’s easy to
 avoid important work if you’re rushing to do everything fast, fearing to fail
-or disappoint someone or too busy to spend time thinking.
+or disappoint someone or just being too busy to spend time thinking.
 
 Sure there will be times when we’ll be too underprepared for a problem. But maybe we
 should try it either way, in a safe environment. At the very minimum we’d learn
