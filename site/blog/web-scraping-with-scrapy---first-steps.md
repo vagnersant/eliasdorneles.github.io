@@ -42,24 +42,24 @@ understand and write programs like this one. =)
 
 
     import scrapy
-    from scrapy.contrib.loaderimportItemLoader
+    from scrapy.contrib.loader import ItemLoader
 
     class YoutubeVideo(scrapy.Item):
-        link= scrapy.Field()
-        title= scrapy.Field()
-        views= scrapy.Field()
+        link = scrapy.Field()
+        title = scrapy.Field()
+        views = scrapy.Field()
 
     class YoutubeChannelLister(scrapy.Spider):
-        name='youtube-channel-lister'
-        youtube_channel='LongboardUK'
-        start_urls=['https://www.youtube.com/user/%s/videos'% youtube_channel]
+        name = 'youtube-channel-lister'
+        youtube_channel = 'LongboardUK'
+        start_urls = ['https://www.youtube.com/user/%s/videos' % youtube_channel]
 
         def parse(self, response):
-            for selin response.css("ul#channels-browse-content-grid > li"):
-                loader=ItemLoader(YoutubeVideo(), selector=sel)
-                loader.add_xpath('link','.//h3/a/@href')
-                loader.add_xpath('title','.//h3/a/text()')
-                loader.add_xpath('views',".//ul/li[1]/text()")
+            for sel in response.css("ul#channels-browse-content-grid > li"):
+                loader = ItemLoader(YoutubeVideo(), selector=sel)
+                loader.add_xpath('link', './/h3/a/@href')
+                loader.add_xpath('title', './/h3/a/text()')
+                loader.add_xpath('views', ".//ul/li[1]/text()")
                 yield loader.load_item()
 
 
@@ -83,14 +83,14 @@ installed using the command (depending on your environment, you may need to use
 To be able to follow this tutorial, you'll need Scrapy version 0.24 or above.
 You can check your installed Scrapy version using the command:
 
-    python -c 'import scrapy; print("%s.%s.%s" % scrapy.version\_info)'
+    python -c 'import scrapy; print scrapy.__version__'
 
 
 The output of this command in the environment we used for this tutorial is like
 this:
 
 
-    $ python -c 'import scrapy; print("%s.%s.%s" % scrapy.version\_info)'
+    $ python -c 'import scrapy; print scrapy.__version__'
     0.24.2
 
 
@@ -112,7 +112,7 @@ and give it a name using thename attribute:
 
     class MinimalSpider(scrapy.Spider):
         """The smallest Scrapy-Spider in the world!"""
-        name='minimal'
+        name = 'minimal'
 
 
 Put this in a file with the name `minimal.py` and run your spider to check if
@@ -489,8 +489,6 @@ frequently asked questions of[StackOverflow](http://stackoverflow.com/):
                 it['excerpt'] = qsel.css('div.excerpt::text')[0].extract()
 
                 yield it
-
-
 
 
 As you can see, the spider defines an Item class named `Question`, and uses the
