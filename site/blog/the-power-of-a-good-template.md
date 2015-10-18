@@ -33,8 +33,8 @@ doing things and get you started learning more about something.
 I started to realize the power of code snippets a couple of years ago, when I
 noticed that I was being lazy to write argument parsing code properly for my
 Python scripts. I knew the script would be much better parsing arguments with
-argparse, but as I wasn’t sure if the script would be useful yet, I would be
-lazy and write something like:
+argparse, but as I wasn’t sure if the script would be useful when I started
+writing it, I would be lazy and write something like:
 
 
 ```
@@ -50,7 +50,8 @@ else:
 
 And this is just awful, for a variety of reasons:
 
-1. it doesn't have a nice help, so people have to read the code to understand what it does
+1. it doesn't have a nice help, so people would often need to read the code to
+   understand what it does
 2. the code isn’t obvious, one has to keep in mind details about sys.argv
 3. it is hard to change when you have more arguments
 
