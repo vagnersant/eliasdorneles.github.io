@@ -50,9 +50,9 @@ else:
 
 And this is just awful, for a variety of reasons:
 
-1) it doesn't have a nice help, so people have to read the code to understand what it does
-2) the code isn’t obvious, one has to keep in mind details about sys.argv
-3) it is hard to change when you have more arguments
+1. it doesn't have a nice help, so people have to read the code to understand what it does
+2. the code isn’t obvious, one has to keep in mind details about sys.argv
+3. it is hard to change when you have more arguments
 
 
 After thinking about this laziness, I decided this was a good use case for a
