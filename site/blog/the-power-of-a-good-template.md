@@ -54,12 +54,13 @@ And this is just awful, for a variety of reasons:
 2) the code isn’t obvious, one has to keep in mind details about sys.argv
 3) it is hard to change when you have more arguments
 
+
 After thinking about this laziness, I decided this was a good use case for a
 code snippet, so I grabbed a vim plugin for code snippets and came up with the
 following snippet:
 
-
 ```
+:::python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """Script description here
@@ -85,16 +86,20 @@ Well, as you can see, there is not that much going on here, just simple
 boilerplate stuff: a docstring, a shebang, a docstring, and an argparse
 initialization inside the if main block.
 
-However, now every time I started a script, even if I wanted to be lazy, I
-could just add `parser.add_argument('my_argument_name')`, code my script
-inside the `run()` function and I would already have a neat argument parsing code
-with help for free. Plus, it was easy to change, I could use the argparse
-goodies of setting defaults, argument help text and type check the arguments.
+However, now every time I started a script, even if I _really_ wanted to be
+lazy, I could just add to the if main block:
+
+    parser.add_argument('my_argument_name')
+    
+Then, I could code my script inside the `run()` function, ending up with a neat
+code with help for free. Plus, it was easy to change, I could use the `argparse`
+features for providing defaults, argument help text and maybe validate and type
+check the arguments.
 
 This little snippet changed my habit for writing scripts. It made the scripts
 easier for people to use and modify them (including myself) and it helped me
 to learn better the library, which I didn’t knew much besides the basics earlier
-as I didn’t use it much. As I started using argparse more, I started
+as I didn’t use it much. As I started using `argparse` more, I started
 designing the command line interfaces better, making decisions about
 positional vs optional arguments, handling grouping and conflicting options,
 trying to come up with truly helpful help text.
