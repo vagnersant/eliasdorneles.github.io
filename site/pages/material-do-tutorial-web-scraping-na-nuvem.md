@@ -589,7 +589,7 @@ O código final do spider fica:
 
 
     class QuotesSpider(scrapy.Spider):
-        name = 'quotes'
+        name = 'quotes-tableful'
         start_urls = ['http://spidyquotes.herokuapp.com/tableful']
         download_delay = 1.5
 
@@ -654,31 +654,117 @@ Exemplo no shell:
 O código final fica:
 
     import scrapy
+    import js2xml
 
 
     class QuotesSpider(scrapy.Spider):
-        name = 'quotes'
-        start_urls = ['http://spidyquotes.herokuapp.com/tableful/']
+        name = 'quotes-js'
+        start_urls = ['http://spidyquotes.herokuapp.com/js/']
         download_delay = 1.5
 
         def parse(self, response):
-            quotes_xpath = '//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]'
+            script = response.xpath('//script[contains(., "var data =")]/text()').extract_first()
+            sel = scrapy.Selector(_root=js2xml.parse(script))
+            for quote in sel.xpath('//var[@name="data"]/array/object'):
+                yield {
+                    'texto': quote.xpath('string(./property[@name="text"])').extract_first(),
+                    'autor': quote.xpath(
+                        'string(./property[@name="author"]//property[@name="name"])'
+                    ).extract_first(),
+                    'tags': quote.xpath('./property[@name="tags"]//string/text()').extract(),
+                }
 
-            for quote in response.xpath(quotes_xpath):
-                texto, autor = quote.xpath('normalize-space(.)').re('(.+) Author: (.+)')
-                tags = quote.xpath('./following-sibling::tr[1]//a/text()').extract()
-                yield dict(texto=texto, autor=autor, tags=tags)
-
-            link_next = response.xpath('//a[contains(., "Next")]/@href').extract_first()
+            link_next = response.css('li.next a::attr("href")').extract_first()
             if link_next:
                 yield scrapy.Request(response.urljoin(link_next))
 
+Fica um pouco obscuro pela transformação de código Javascript em XML, mas a
+extração fica mais confiável do que hacks baseados em expressões regulares.
 
 ### Lidando com AJAX
 
-Dica: usar a aba Network do browser, usar Copy as cURL e `minreq --action print_scrapy_request`.
+Agora, vamos para a versão AJAX com scroll infinito: <http://spidyquotes.herokuapp.com/scroll/>
 
-TODO: colocar código final do spider aqui.
+Se você observar o código-fonte, verá que os dados não estão lá.  No fonte só
+tem um código Javascript que busca os dados via AJAX, você pode ver isso
+olhando a aba *Network* das ferramentas do browser (no meu caso Chrome, mas
+no Firefox é similar).
+
+Nesse caso, precisamos replicar essas requisições com o Scrapy, e tratar
+os resultados de acordo com a resposta.
+
+Explorando no shell, vemos que o conteúdo é JSON:
+
+    scrapy shell http://spidyquotes.herokuapp.com/api/quotes?page=1
+
+    >>> response.headers
+    {'Content-Type': 'application/json',
+     'Date': 'Sun, 15 Nov 2015 22:18:29 GMT',
+     'Server': 'gunicorn/19.3.0',
+     'Via': '1.1 vegur'}
+
+Portanto, podemos simplesmente usar o módulo JSON da biblioteca padrão e ser feliz:
+
+    >>> import json
+    >>> data = json.loads(response.body)
+    >>> data.keys()
+    [u'has_next', u'quotes', u'tag', u'page', u'top_ten_tags']
+    >>> data['has_next']
+    True
+    >>> data['quotes'][0]
+    {u'author': {u'goodreads_link': u'/author/show/12898.Stephen_Chbosky',
+      u'name': u'Stephen Chbosky'},
+     u'tags': [u'inspirational', u'love'],
+     u'text': u'\u201cWe accept the love we think we deserve.\u201d'}
+    >>> data['page']
+    1
+
+Código final do spider fica:
+
+    import scrapy
+    import json
+
+
+    class QuotesSpider(scrapy.Spider):
+        name = 'quotes-scroll'
+        quotes_base_url = 'http://spidyquotes.herokuapp.com/api/quotes?page=%s'
+        start_urls = [quotes_base_url % 1]
+        download_delay = 1.5
+
+        def parse(self, response):
+            data = json.loads(response.body)
+            for d in data.get('quotes', []):
+                yield {
+                    'texto': d['text'],
+                    'autor': d['author']['name'],
+                    'tags': d['tags'],
+                }
+            if data['has_next']:
+                next_page = data['page'] + 1
+                yield scrapy.Request(self.quotes_base_url % next_page)
+
+Ao lidar com requisições desse tipo, uma ferramenta útil que pode ser o
+[minreq](https://pypi.python.org/pypi/minreq), instale com: ``pip install
+minreq``.
+
+O minreq tenta encontrar a requisição mínima necessária para replicar
+uma requisição do browser, e pode opcionalmente mostrar como montar
+um objeto `scrapy.Request` equivalente.
+
+Rode o minreq com:
+
+    minreq --action print_scrapy_request
+
+Ele fica esperando você colar uma requisição no formato cURL. Para isto,
+encontre a requisição AJAX que você quer replicar na aba Network do browser, e
+use o recurso "Copy as cURL":
+
+  ![](http://i.imgur.com/hqz9b58.jpg)
+
+Cole no prompt do minreq, e espere ele fazer a mágica. =)
+
+> **Nota:** O minreq está em estágio pre-alpha, você provavelmente vai
+> encontrar bugs -- por favor reporte no GitHub.
 
 
 ## Rodando no Scrapy Cloud
@@ -718,39 +804,39 @@ A partir desse momento, você deve ser capaz de rodar cada spider em separado us
 > pessoas ou fazer deploy no Cloud, nessa hora já é interessante que fique tudo
 > estruturado e fácil de crescer dentro de um projeto.
 
-### Deploy do projeto
+### Configuração no Scrapy Cloud
 
 Antes do deploy, você precisa criar um projeto no Scrapy Cloud. Na tela
 inicial, clique no botão adicionar uma organização:
 
 <center>
-  ![](http://imgur.com/9fsBv4I)
+  ![](http://i.imgur.com/9fsBv4I.png)
 </center>
 
 Dê um nome para a organização e confirme:
 
 <center>
-  ![](http://imgur.com/GvfEXzu)
+  ![](http://i.imgur.com/GvfEXzu.png)
 </center>
 
 Em seguida, adicione um serviço do para hospedar o seu serviço, clicando no
 botão "+ Service" que aparece dentro da organização criada:
 
 <center>
-  ![](http://imgur.com/D0VTJLc)
+  ![](http://i.imgur.com/D0VTJLc.png)
 </center>
 
 Preencha os dados do seu projeto e confirme:
 
 <center>
-  ![](http://imgur.com/05Hvbu3)
+  ![](http://i.imgur.com/05Hvbu3.png)
 </center>
 
 Depois disso, clique no nome do serviço na página inicial para acessar o local
 onde seu projeto estará disponível:
 
 <center>
-  ![](http://imgur.com/OIZLxYA)
+  ![](http://i.imgur.com/OIZLxYA.png)
 </center>
 
 Note o número identificador do seu projeto: você deve usar esse número
@@ -758,13 +844,17 @@ para a diretiva `project_id` no arquivo `scrapy.cfg` dentro do seu projeto
 para fazer o deploy.
 
 <center>
-  ![](http://imgur.com/ErsMJbB)
+  ![](http://i.imgur.com/ErsMJbB.png)
 </center>
 
-TODO: mostrar scrapy.cfg
+
+### Instalando e configurando shub
 
 A maneira mais fácil de fazer deploy no Scrapy Cloud é usando a ferramenta
-[shub](http://doc.scrapinghub.com/shub.html). Instale-a com:
+[shub](http://doc.scrapinghub.com/shub.html), cliente da linha de comando
+para o Scrapy Cloud e demais serviços da Scrapinghub.
+
+Instale-a com:
 
     pip install shub --upgrade
 
@@ -780,14 +870,59 @@ key](https://dash.scrapinghub.com/account/apikey)).
 > o que é útil para quando você deseje fazer requisições HTTP para as APIs na
 > linha de comando.
 
+
+### Preparando o projeto
+
+Antes de fazer deploy do projeto, precisamos fazer deploy das dependências no
+Scrapy Cloud.
+Crie um arquivo `requirements-deploy.txt` com o seguinte conteúdo:
+
+    extruct
+    js2xml
+    slimit
+    ply
+
+Rode o comando:
+
+    shub deploy-reqs PROJECT_ID requirements-deploy.txt
+
+Substitua `PROJECT_ID` pelo id do seu projeto (neste caso, 27199).
+
+Edite o arquivo `scrapy.cfg` na raiz do projeto, alterando a configuração
+`project` (que por padrão tem o nome do projeto) para apontar pro ID do projeto.
+Ele deve ficar assim:
+
+    [settings]
+    default = quotes_crawler.settings
+
+    [deploy]
+    project = 27199
+
+#### Deploy das dependências
+
 Agora faça deploy do projeto com o comando:
 
     shub deploy
 
-Se tudo deu certo, você verá a mensagem:
+Se tudo deu certo, você verá algo como
 
-TODO: colar mensagem de sucesso
+    $ shub deploy
+    Packing version 1447628479
+    Deploying to Scrapy Cloud project "27199"
+    {"status": "ok", "project": 27199, "version": "1447628479", "spiders": 5}
+    Run your spiders at: https://dash.scrapinghub.com/p/27199/
 
-### Configurar spider para rodar periodicamente
+Agora você pode ir para a URL indicada (neste caso, <https://dash.scrapinghub.com/p/27199/>)
+e agendar jobs dos spiders usando o botão "Schedule".
 
-TODO: screenshot
+Para configurar para rodar periodicamente, utilize a aba "Periodic Jobs" (menu à esquerda).
+
+# The End
+
+Para obter ajuda, pergunte no [Stackoverflow em Português usando a tag
+scrapy](http://pt.stackoverflow.com/tags/scrapy) ou pergunte em inglês no
+[Stackoverflow em inglês](http://stackoverflow.com/tags/scrapy) ou na [lista de
+e-mail scrapy-users](https://groups.google.com/forum/#!forum/scrapy-users).
+
+Obrigado Valdir pela ajuda com a montagem desse tutorial, tanto no desenvolvimento
+do app `spidyquotes` quanto na escrita do material. *You rock, dude!*
