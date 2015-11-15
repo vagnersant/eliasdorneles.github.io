@@ -919,6 +919,10 @@ Para configurar para rodar periodicamente, utilize a aba "Periodic Jobs" (menu �
 
 # The End
 
+Era isso, se você chegou até aqui, parabéns e obrigado pela atenção! :)
+
+Você pode conferir o código do projeto final em: <https://github.com/eliasdorneles/quotes_crawler>
+
 Para obter ajuda, pergunte no [Stackoverflow em Português usando a tag
 scrapy](http://pt.stackoverflow.com/tags/scrapy) ou pergunte em inglês no
 [Stackoverflow em inglês](http://stackoverflow.com/tags/scrapy) ou na [lista de
