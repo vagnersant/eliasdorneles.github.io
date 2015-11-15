@@ -533,7 +533,7 @@ mantê-lo atualizado.
 Agora, vamos extrair os mesmos dados mas para um markup faltando bom-gosto:
 <http://spidyquotes.herokuapp.com/tableful/>
 
-A dica para lidar com esse tipo de coisa é: **aprenda XPath**, vale a pena!
+Para lidar com esse tipo de coisa, a dica é: **aprenda XPath**, vale a pena!
 
 Comece aqui: <http://www.slideshare.net/scrapinghub/xpath-for-web-scraping>
 
@@ -561,24 +561,117 @@ linhas cujo texto comece com `"Tags: "`:
      <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
      <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>]
 
-O código final do spider ficará:
+Para extrair os dados, precisamos de alguma exploração:
 
-TODO: código do spider aqui.
+    >>> quote = response.xpath('//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]')[0]
+    >>> print quote.extract()
+    <tr style="border-bottom: 0px; ">
+                <td style="padding-top: 2em;">“We accept the love we think we deserve.” Author: Stephen Chbosky</td>
+                        </tr>
+    >>> quote.xpath('string(.)').extract_first()
+        u'\n            \u201cWe accept the love we think we deserve.\u201d Author: Stephen Chbosky\n        '
+    >>> quote.xpath('normalize-space(.)').extract_first()
+        u'\u201cWe accept the love we think we deserve.\u201d Author: Stephen Chbosky'
+
+Note como não tem marcação separando o autor do conteúdo, apenas uma string
+"Author:".  Então podemos usar o método `.re()` da classe seletor, que nos
+permite usar uma expressão regular:
+
+    >>> text, author = quote.xpath('normalize-space(.)').re('(.+) Author: (.+)')
+    >>> text
+        u'\u201cWe accept the love we think we deserve.\u201d'
+    >>> author
+        u'Stephen Chbosky'
+
+O código final do spider fica:
+
+    import scrapy
+
+
+    class QuotesSpider(scrapy.Spider):
+        name = 'quotes'
+        start_urls = ['http://spidyquotes.herokuapp.com/tableful']
+        download_delay = 1.5
+
+        def parse(self, response):
+            quotes_xpath = '//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]'
+
+            for quote in response.xpath(quotes_xpath):
+                texto, autor = quote.xpath('normalize-space(.)').re('(.+) Author: (.+)')
+                tags = quote.xpath('./following-sibling::tr[1]//a/text()').extract()
+                yield dict(texto=texto, autor=autor, tags=tags)
+
+            link_next = response.xpath('//a[contains(., "Next")]/@href').extract_first()
+            if link_next:
+                yield scrapy.Request(response.urljoin(link_next))
+
+
+Note como o uso de XPath permitiu vincularmos elementos de acordo com o conteúdo
+tanto no caso das tags quanto no caso do link para a próxima página.
 
 
 ### Lidando com dados dentro do código
 
+Olhando o código-fonte da versão do site: <http://spidyquotes.herokuapp.com/js/>
+vemos que os dados que queremos estão todos num bloco de código Javascript,
+dentro de um array estático. E agora?
+
 A dica aqui é usar a lib [js2xml](https://github.com/redapple/js2xml) para
-converter o código Javascript em XML e então usar XPath ou CSS em cima desse
-código para extrair os dados que você está interessado.
+converter o código Javascript em XML e então usar XPath ou CSS em cima do XML
+resultante para extrair os dados que a gente quer.
 
 Instale a biblioteca js2xml com:
 
     pip install js2xml
 
-Veja como fica o código:
+Exemplo no shell:
 
-TODO: colocar código do spider com js2xml aqui
+    scrapy shell http://spidyquotes.herokuapp.com/js/
+
+    >>> import js2xml
+    >>> script = response.xpath('//script[contains(., "var data =")]/text()').extract_first()
+    >>> sel = scrapy.Selector(_root=js2xml.parse(script))
+    >>> sel.xpath('//var[@name="data"]/array/object')
+        [<Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>,
+     <Selector xpath='//var[@name="data"]/array/object' data=u'<object><property name="author"><object>'>]
+    >>> quote = sel.xpath('//var[@name="data"]/array/object')[0]
+    >>> quote.xpath('string(./property[@name="text"])').extract_first()
+        u'\u201cWe accept the love we think we deserve.\u201d'
+    >>> quote.xpath('string(./property[@name="author"]//property[@name="name"])').extract_first()
+        u'Stephen Chbosky'
+    >>> quote.xpath('./property[@name="tags"]//string/text()').extract()
+        [u'inspirational', u'love']
+
+
+O código final fica:
+
+    import scrapy
+
+
+    class QuotesSpider(scrapy.Spider):
+        name = 'quotes'
+        start_urls = ['http://spidyquotes.herokuapp.com/tableful/']
+        download_delay = 1.5
+
+        def parse(self, response):
+            quotes_xpath = '//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]'
+
+            for quote in response.xpath(quotes_xpath):
+                texto, autor = quote.xpath('normalize-space(.)').re('(.+) Author: (.+)')
+                tags = quote.xpath('./following-sibling::tr[1]//a/text()').extract()
+                yield dict(texto=texto, autor=autor, tags=tags)
+
+            link_next = response.xpath('//a[contains(., "Next")]/@href').extract_first()
+            if link_next:
+                yield scrapy.Request(response.urljoin(link_next))
 
 
 ### Lidando com AJAX
