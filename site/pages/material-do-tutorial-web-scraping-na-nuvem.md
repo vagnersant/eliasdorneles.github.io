@@ -539,6 +539,30 @@ Comece aqui: <http://www.slideshare.net/scrapinghub/xpath-for-web-scraping>
 
 > *O domínio de XPath diferencia os gurus dos gafanhotos. -- Elias Dorneles, 2014*
 
+Como o markup HTML dessa página não uma estrutura boa, em vez de fazer scraping
+baseado nas classes CSS ou ids dos elementos, com XPath podemos fazer baseando-se
+na estrutura e nos padrões presentes no conteúdo.
+
+Por exemplo, se você abrir o shell para a página
+<http://spidyquotes.herokuapp.com/tableful>, usando a expressão a seguir
+retorna os os nós `tr` (linhas da tabela) que contém os textos das citações,
+usando uma condição para pegar apenas linhas que estão imediatamente antes de
+linhas cujo texto comece com `"Tags: "`:
+
+    >>> response.xpath('//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]')
+    [<Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>,
+     <Selector xpath='//tr[./following-sibling::tr[1]/td[starts-with(., "Tags:")]]' data=u'<tr style="border-bottom: 0px; ">\n      '>]
+
+O código final do spider ficará:
+
 TODO: código do spider aqui.
 
 
@@ -603,18 +627,46 @@ A partir desse momento, você deve ser capaz de rodar cada spider em separado us
 
 ### Deploy do projeto
 
-Antes do deploy, você precisa criar um projeto no Scrapy Cloud.
-Na tela inicial, clique no botão para adicionar serviço:
+Antes do deploy, você precisa criar um projeto no Scrapy Cloud. Na tela
+inicial, clique no botão adicionar uma organização:
 
-TODO: screenshot
+<center>
+  ![](http://imgur.com/9fsBv4I)
+</center>
 
-Dê um nome para o projeto e confirme:
+Dê um nome para a organização e confirme:
 
-TODO: screenshot
+<center>
+  ![](http://imgur.com/GvfEXzu)
+</center>
+
+Em seguida, adicione um serviço do para hospedar o seu serviço, clicando no
+botão "+ Service" que aparece dentro da organização criada:
+
+<center>
+  ![](http://imgur.com/D0VTJLc)
+</center>
+
+Preencha os dados do seu projeto e confirme:
+
+<center>
+  ![](http://imgur.com/05Hvbu3)
+</center>
+
+Depois disso, clique no nome do serviço na página inicial para acessar o local
+onde seu projeto estará disponível:
+
+<center>
+  ![](http://imgur.com/OIZLxYA)
+</center>
 
 Note o número identificador do seu projeto: você deve usar esse número
 para a diretiva `project_id` no arquivo `scrapy.cfg` dentro do seu projeto
 para fazer o deploy.
+
+<center>
+  ![](http://imgur.com/ErsMJbB)
+</center>
 
 TODO: mostrar scrapy.cfg
 
