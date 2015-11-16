@@ -839,9 +839,8 @@ onde seu projeto estará disponível:
   ![](http://i.imgur.com/OIZLxYA.png)
 </center>
 
-Note o número identificador do seu projeto: você deve usar esse número
-para a diretiva `project_id` no arquivo `scrapy.cfg` dentro do seu projeto
-para fazer o deploy.
+Note o número identificador do seu projeto: você usará esse identificador na
+hora fazer o deploy.
 
 <center>
   ![](http://i.imgur.com/ErsMJbB.png)
@@ -888,25 +887,17 @@ Rode o comando:
 
 Substitua `PROJECT_ID` pelo id do seu projeto (neste caso, 27199).
 
-Edite o arquivo `scrapy.cfg` na raiz do projeto, alterando a configuração
-`project` (que por padrão tem o nome do projeto) para apontar pro ID do projeto.
-Ele deve ficar assim:
-
-    [settings]
-    default = quotes_crawler.settings
-
-    [deploy]
-    project = 27199
-
 #### Deploy das dependências
 
 Agora faça deploy do projeto com o comando:
 
-    shub deploy
+    shub deploy -p PROJECT_ID
+
+Novamente, substituindo `PROJECT_ID` pelo id do seu projeto (neste caso, 27199)
 
 Se tudo deu certo, você verá algo como
 
-    $ shub deploy
+    $ shub deploy -p 27199
     Packing version 1447628479
     Deploying to Scrapy Cloud project "27199"
     {"status": "ok", "project": 27199, "version": "1447628479", "spiders": 5}
@@ -915,7 +906,11 @@ Se tudo deu certo, você verá algo como
 Agora você pode ir para a URL indicada (neste caso, <https://dash.scrapinghub.com/p/27199/>)
 e agendar jobs dos spiders usando o botão "Schedule".
 
-Para configurar para rodar periodicamente, utilize a aba "Periodic Jobs" (menu à esquerda).
+> **Nota:** opcionalmente, você pode configurar o identificador do projeto no
+> arquivo `scrapy.cfg`, para não precisar ter que lembrar a cada vez.
+
+Para configurar um spider para rodar periodicamente, utilize a aba "Periodic
+Jobs", no menu à esquerda.
 
 # The End
 
