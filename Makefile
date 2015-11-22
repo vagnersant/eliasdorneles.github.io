@@ -17,10 +17,9 @@ help:
 compile:
 	pelican ${SITE_DIR} -t ${THEME_DIR} -o output -s settings.py
 
-publish: clean compile
+publish:
 	ghp-import -m "Update site" output
 	git push -f origin gh-pages:master
-	git push origin source:source
 
 clean:
 	rm -rf output/* cache
