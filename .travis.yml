@@ -16,6 +16,6 @@ script:
 
 deploy:
   provider: script
-  script: make publish
+  script: make clean compile publish
   on:
     branch: source
