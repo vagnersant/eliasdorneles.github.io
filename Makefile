@@ -22,7 +22,7 @@ publish:
 	git push -f origin gh-pages:master
 
 clean:
-	rm -rf output/* cache
+	rm -rf output/ cache
 
 server: clean compile
 	(cd output && python -m webbrowser http://localhost:8000 && python -m SimpleHTTPServer)
