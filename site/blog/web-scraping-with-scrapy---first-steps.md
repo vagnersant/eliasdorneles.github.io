@@ -5,6 +5,8 @@ Slug: Web-Scraping-with-Scrapy---first-steps
 
 
 
+<sub>See [a Portuguese version of this article here](https://pythonhelp.wordpress.com/2014/08/05/web-scraping-com-scrapy-primeiros-passos/)</sup>
+
 Imagine you want to extract content from the Web that isn't all in only one
 page: you need a way tonavigate through the site to get to the pages that
 contain the useful information. For example, maybe you want to get the
