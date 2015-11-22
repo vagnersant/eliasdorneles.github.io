@@ -16,6 +16,9 @@ script:
 
 deploy:
   provider: script
-  script: make clean compile publish
+  script:
+    - make clean compile
+    - ghp-import -m "Update site" output
+    - git push -f deploy gh-pages:master
   on:
     branch: source
