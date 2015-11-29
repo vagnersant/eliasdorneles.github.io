@@ -1,6 +1,9 @@
 SHELL := /bin/bash
 SITE_DIR := site
 THEME_DIR := ./mytheme
+OUTPUT_DIR := ./output
+
+COMPILE := pelican ${SITE_DIR} -t ${THEME_DIR} -o ${OUTPUT_DIR} -s settings.py
 
 .PHONY: clean compile
 
@@ -15,14 +18,11 @@ help:
 	@echo compile - generate site in output dir
 
 compile:
-	pelican ${SITE_DIR} -t ${THEME_DIR} -o output -s settings.py
+	${COMPILE}
 
 clean:
-	rm -rf output/ cache
+	rm -rf ${OUTPUT_DIR} cache
 
-server: clean compile
-	(cd output && python -m webbrowser http://localhost:8000 && python -m SimpleHTTPServer)
-
-watch: compile
-	@echo Watching for changes...
-	watchmedo shell-command --command 'make compile' --recursive --drop ${SITE_DIR} ${THEME_DIR}
+server: compile
+	(cd ${OUTPUT_DIR} && python -m webbrowser http://localhost:8000 && python -m SimpleHTTPServer &)
+	${COMPILE} --autoreload
