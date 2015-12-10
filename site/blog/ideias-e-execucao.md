@@ -5,7 +5,7 @@ Slug: Idéias-e-execução
 
 Uma vez ou outra a gente topa com um cara que acha que ter uma idéia é
 uma coisa tremendamente importante. Execução, isto é para noviços
-(subentenda-se, *macacos*)! O jeito de ter sucesso é ter uma idéia
+(subentenda-se, *gente que só faz o que mandam*)! O jeito de ter sucesso é ter uma idéia
 brilhante, e a sorte de ter tido essa idéia antes de todo mundo...  
 De vez em quando, esse cara tem uma idéia empolgante o suficiente pra
 iludir a si próprio que teria uma chance de criar uma coisa. E em vez de
