@@ -104,3 +104,8 @@ img {
 .footer-menu {
     padding: 10px;
 }
+
+code {
+    background-color: #ddd;
+    padding: 1px 2px;
+}
