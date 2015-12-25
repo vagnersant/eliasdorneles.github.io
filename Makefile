@@ -8,14 +8,11 @@ COMPILE := pelican ${SITE_DIR} -t ${THEME_DIR} -o ${OUTPUT_DIR} -s settings.py
 .PHONY: clean compile
 
 help:
-	@echo To edit, run make server in one tab and make watch in another
+	@echo Quick help:
 	@echo
-	@echo Available commands:
-	@echo
-	@echo publish - publish site in GitHub
-	@echo server - start a server on output dir
-	@echo watch - watch for changes and update static files
-	@echo compile - generate site in output dir
+	@echo "compile  generate site"
+	@echo "server   generate site watching for changes and start server"
+	@echo "clean    removes output and cache directories"
 
 compile:
 	${COMPILE}

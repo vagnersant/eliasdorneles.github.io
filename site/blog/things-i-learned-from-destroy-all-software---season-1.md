@@ -2,6 +2,7 @@ Title: Things I Learned from Destroy All Software - Season 1
 Date: 2015-01-18 10:07
 Author: elias
 Slug: Things-I-Learned-from-Destroy-All-Software---Season-1
+Tags: das-screencasts
 
 
 So, a few weeks ago I purchased and watched the first season of [Destroy All
