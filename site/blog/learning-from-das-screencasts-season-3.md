@@ -166,8 +166,7 @@ Vim doesn’t have anything like that, help system are static text files.
 > You can build vim inside Emacs, but you could never build Emacs inside vim.
 
 However, a fresh Emacs installation (without customization) is less usable than
-a fresh Vim installation.  Kinds of brittle and fragile tests Mocking vs. using
-same dependencies used in production.
+a fresh Vim installation.
 
 
 # Better structure for Bash scripts by using many small functions.
