@@ -27,7 +27,7 @@ the command line. Well, maybe you're smiling to yourself because you already
 know about [awk](http://en.wikipedia.org/wiki/AWK), and you use it all the time
 for this kind of stuff doing something like:  
 
-    $ cat myfile.txt | awk'{ print $3 }'
+    $ cat myfile.txt | awk '{ print $3 }'
     amelia.zodiacusque@gmail.com
     julie.perscrutabor@skeeve.com
 
@@ -66,7 +66,7 @@ its own](https://github.com/eliasdorneles/dotfiles/raw/master/bin/total_sum):
     #!/bin/bash
     # Report sum of numbers fed to the stdin
     
-    awk'{ total+=$1 } END { print total }'
+    awk '{ total+=$1 } END { print total }'
     $ echo -e "1\n2\n3\n4"
     1
     2
