@@ -17,8 +17,8 @@ spaces, like this:
 
 
     $ cat myfile.txt
-    Amelia       555-5553     amelia.zodiacusque@gmail.com
-     Julie        555-6699     julie.perscrutabor@skeeve.com
+    Amelia        555-5553     amelia.zodiacusque@gmail.com
+    Julie         555-6699     julie@skeeve.com
 
 
 This form of vertical alignment is cool because you can skim through any column
@@ -29,7 +29,7 @@ for this kind of stuff doing something like:
 
     $ cat myfile.txt | awk '{ print $3 }'
     amelia.zodiacusque@gmail.com
-    julie.perscrutabor@skeeve.com
+    julie@skeeve.com
 
 
 That's all fine, [awk is a great tool to
@@ -47,9 +47,13 @@ situation you'll do:
     $ cat myfile.txt | fields 2
     555-5553
     555-6699
-    $ cat myfile.txt | fields 2 3
-    555-5553amelia.zodiacusque@gmail.com
-    555-6699julie.perscrutabor@skeeve.com
+    $ cat myfile.txt  | fields 2 3          # get fields separated by TABs
+    555-5553    amelia.zodiacusque@gmail.com
+    555-6699    julie@skeeve.com
+    $ cat myfile.txt  | fields -s , 2 3     # or by comma
+    555-5553,amelia.zodiacusque@gmail.com
+    555-6699,julie@skeeve.com
+
 
 
 ### total_sum
