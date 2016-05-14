@@ -3,8 +3,10 @@ Date: 2015-12-13 02:16
 Author: Elias Dorneles
 Slug: regex-metacharacters-differences-across-several-environments
 
-This table is helpful for learning regular expression metacharacters
+<!-- PELICAN_BEGIN_SUMMARY -->
+Here is a table helpful for learning regular expression metacharacters
 differences across several languages and environments.
+<!-- PELICAN_END_SUMMARY -->
 
 
 | Language/environment | Optional  | More  | Brackets  | Border | Or | Group  |

@@ -7,7 +7,7 @@ Tags: das-screencasts
 Here is a summary of my learning from watching [season 3 of Destroy All
 Software screencasts](https://www.destroyallsoftware.com/screencasts/catalog).
 
-# Which kind of code should go into Models?
+## Which kind of code should go into Models?
 
 Gary is fond of an architecture style for web applications,
 which is [equivalent to the so-called clean architecture](http://rhodesmill.org/brandon/slides/2014-07-pyohio/clean-architecture/):
@@ -41,7 +41,7 @@ My feeling is that you need extra discipline to use this architecture.  I think
 there is a complexity threshold for deciding when the effort will pay off.
 
 
-# Outside-in TDD
+## Outside-in TDD
 
 I already mentioned [outside-in
 TDD](http://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
@@ -69,7 +69,7 @@ of commits will be different (with stubbing, the order will be more like
 top-down) and tests with the stub approach tend to be more isolated.
 
 
-# Testing code that calls HTTP APIs
+## Testing code that calls HTTP APIs
 
 Here is a cool idea: consider external HTTP APIs like “databases”, and test
 your wrapper code mocking the HTTP interactions with a tool to replay
@@ -109,7 +109,7 @@ HTTP library you're using, to be able to intercept the requests -- VCR.py
 currently lacks support for Twisted Web Client.
 
 
-# Dealing with untested Code
+## Dealing with untested Code
 
 In a series of episodes, Gary demonstrates how to tackle an untested method,
 adding tests and then refactoring it, keeping the test suite updated.
@@ -155,7 +155,7 @@ the hassle (let me know if you think this is useful).
 Python doesn't make it easy to build this kind of tool, I'm really envious. =)
 
 
-# Emacs, chainsaw of chainsaws
+## Emacs, chainsaw of chainsaws
 
 Emacs is written in Elisp, and can be extended with Elisp -- this offers a
 great level of customization. Also, Emacs environment knows about itself: for
@@ -169,7 +169,7 @@ However, a fresh Emacs installation (without customization) is less usable than
 a fresh Vim installation.
 
 
-# Better structure for Bash scripts by using many small functions.
+## Better structure for Bash scripts by using many small functions.
 
 This:
 
@@ -198,7 +198,7 @@ is better than this:
 Last one is shorter, but the former is easier to read and more composable.
 
 
-# TDD: when to generalize
+## TDD: when to generalize
 
 Deciding when to generalize in TDD can be difficult, depending on your code and
 process.
@@ -218,7 +218,7 @@ here are some situations to help you decide when it's time to generalize instead
 
 Note that this is illustrative, but not comprehensive -- there are probably.
 
-# TDD: bad expectations
+## TDD: bad expectations
 
 Here are some notes about bad expectations/assertions in the test code, which
 are bad because they mine our confidence in the test suite.

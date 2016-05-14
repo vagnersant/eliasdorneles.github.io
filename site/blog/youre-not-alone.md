@@ -12,6 +12,7 @@ If you’ve ever felt that you’re a mediocre developer at best, even though yo
 
 If you’ve ever felt bad about not being nearly as productive as you’d want to, you’re not alone.
 
+<!-- PELICAN_BEGIN_SUMMARY -->
 If you’ve ever thought that you will probably be fired eventually because you’re not as smart and accomplished as your peers and “someday they’ll figure that out”, you’re not alone.
 
 If you’ve ever refrained from introducing an idea out of fear of being ridiculed or laughed at, you’re not alone.
@@ -19,6 +20,7 @@ If you’ve ever refrained from introducing an idea out of fear of being ridicul
 If the thought ever crossed your mind that you’re a fraud waiting to be uncovered, that everyone is smarter and better and faster and more knowledgeable than you, I want to tell you that you’re not alone.
 
 Most of us go through that at least at some point, sometimes every day. And the thing is, there <em>are</em> ways for us to overcome these feelings that, even if we don’t completely eliminate them, it help us to grow both personally and professionally.
+<!-- PELICAN_END_SUMMARY -->
 
 I want to talk about these issues, because I believe this conversation is important for building our culture and we all can benefit from it.
 

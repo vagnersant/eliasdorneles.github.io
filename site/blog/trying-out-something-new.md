@@ -4,7 +4,9 @@ Author: Elias Dorneles
 Slug: trying-out-something-new
 
 
+<!-- PELICAN_BEGIN_SUMMARY -->
 ![](http://i.imgur.com/KZo7ObI.png)
+<!-- PELICAN_END_SUMMARY -->
 
 ![](http://imgur.com/vjWgCAK.png)
 

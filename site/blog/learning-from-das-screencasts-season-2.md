@@ -7,7 +7,7 @@ Tags: das-screencasts
 These are my notes for [season 2 of Destroy All Software
 screencasts](https://www.destroyallsoftware.com/screencasts/catalog).
 
-# The command line, Unix, git and Vim
+## The command line, Unix, git and Vim
 
 In the first episode Gary teaches how to compose a complex Unix command line:
 the point is that you want to build it slowly, checking if it works at every
@@ -115,7 +115,7 @@ itself](http://superuser.com/questions/86340/linux-command-to-repeat-a-string-n-
 but I like the conciseness and readability of this one.
 
 
-# TDD
+## TDD
 
 Some videos deal with Test Driven Design vs Test Driven Development, talking
 about an idea I had never heard before called
@@ -156,7 +156,7 @@ isolated tests with meaningful names that test only one thing. This is
 specially useful when you’re refactoring and a test breaks, because you can see
 more directly what went wrong.
 
-# Refactoring in a codebase new to you
+## Refactoring in a codebase new to you
 
 There are two episodes quite interesting to watch, where Gary refactors out a
 Rails controller without much previous knowledge about the code.
@@ -168,7 +168,7 @@ illustrate that if you know well your language and tools, you can work
 reasonably well in codebases that are new to you. It’s nice to try this kind of
 thing every once in a while.
 
-# Acceptance tests
+## Acceptance tests
 
 In a video about acceptance tests, Gary shows the usage of
 [Cucumber](https://cucumber.io/) for testing a Rails application, using a

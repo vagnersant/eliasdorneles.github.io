@@ -25,3 +25,13 @@ ARCHIVES_URL = 'archives.html'
 DISQUS_SITENAME = 'hopefulramble'
 
 JINJA_EXTENSIONS = ['jinja2.ext.with_']
+
+CLEAN_SUMMARY_MINIMUM_ONE = True
+
+CLEAN_SUMMARY_MAXIMUM = 1
+
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = [
+    'summary',
+    'clean_summary',
+]
