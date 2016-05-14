@@ -33,7 +33,7 @@ Plus](https://plus.google.com/110981030061712822816/posts), including the one
 he made public accidentally and it ended up making him kind of famous outside
 of the programming circles too.
 
-<p> I enjoyed reading this book a lot, although I suppose it would be expected
+I enjoyed reading this book a lot, although I suppose it would be expected
 for me say that, what with me being a fanboy and all. That being said, it's a
 quick read and lot's of fun -- highly recommended! Although it amounts to more
 than two hundred pages it still does not make half of the stuff on

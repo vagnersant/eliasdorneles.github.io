@@ -11,7 +11,7 @@ from datetime import datetime
 
 TEMPLATE = """Title: {title}
 Date: {date}
-Author: elias
+Author: Elias Dorneles
 Slug: {title_slug}
 
 Write here...
