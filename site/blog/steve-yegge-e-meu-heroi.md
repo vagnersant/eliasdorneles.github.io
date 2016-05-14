@@ -1,6 +1,6 @@
 Title: Steve Yegge é meu herói!
 Date: 2011-07-28 08:23
-Author: elias
+Author: Elias Dorneles
 Slug: Steve-Yegge-é-meu-herói!
 
 [Steve

@@ -1,6 +1,6 @@
 Title: Regex metacharacters differences across several environments
 Date: 2015-12-13 02:16
-Author: elias
+Author: Elias Dorneles
 Slug: regex-metacharacters-differences-across-several-environments
 
 This table is helpful for learning regular expression metacharacters

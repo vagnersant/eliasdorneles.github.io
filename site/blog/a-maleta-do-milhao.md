@@ -1,6 +1,6 @@
 Title: A maleta do milhão
 Date: 2011-10-17 23:40
-Author: elias
+Author: Elias Dorneles
 Slug: A-maleta-do-milhão
 
 [![maleta do

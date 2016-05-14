@@ -1,6 +1,6 @@
 Title: Sobre construir excelente experiência de usuário - livro EffectiveUI
 Date: 2012-11-25 18:48
-Author: elias
+Author: Elias Dorneles
 Slug: Sobre-construir-excelente-experiência-de-usuário---livro-EffectiveUI
 
 > Este é o primeiro post na idéia de escrever sobre os livros que leio,

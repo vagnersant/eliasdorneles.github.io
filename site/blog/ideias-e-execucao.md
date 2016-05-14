@@ -1,6 +1,6 @@
 Title: Idéias e execução
 Date: 2012-03-09 07:38
-Author: elias
+Author: Elias Dorneles
 Slug: Idéias-e-execução
 
 Uma vez ou outra a gente topa com um cara que acha que ter uma idéia é

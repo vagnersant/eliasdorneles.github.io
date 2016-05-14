@@ -1,6 +1,6 @@
 Title: Entre profissionais
 Date: 2012-06-21 20:41
-Author: elias
+Author: Elias Dorneles
 Slug: Entre-profissionais
 
 

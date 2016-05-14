@@ -1,6 +1,6 @@
 Title: Aprendendo Thumbpicking
 Date: 2011-12-11 23:12
-Author: elias
+Author: Elias Dorneles
 Slug: Aprendendo-Thumbpicking
 
 <center>

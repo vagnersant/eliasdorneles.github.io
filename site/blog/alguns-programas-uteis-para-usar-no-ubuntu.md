@@ -1,6 +1,6 @@
 Title: Alguns programas úteis para usar no Ubuntu
 Date: 2013-08-14 22:24
-Author: elias
+Author: Elias Dorneles
 Slug: Alguns-programas-úteis-para-usar-no-Ubuntu
 
 Ok, hoje estou tirando a preguiça do traseiro para escrever sobre algo

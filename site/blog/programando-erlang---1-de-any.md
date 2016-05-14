@@ -1,6 +1,6 @@
 Title: Programando Erlang - 1 de Any
 Date: 2014-04-05 23:35
-Author: elias
+Author: Elias Dorneles
 Slug: Programando-Erlang---1-de-Any
 
 Na virada do ano, uma das minhas resoluções para 2014 foi a de que este ano

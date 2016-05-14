@@ -1,6 +1,6 @@
 Title: Algoritmos deviam ser ensinados breadth-first, e não depth-first
 Date: 2012-11-07 16:58
-Author: elias
+Author: Elias Dorneles
 Slug: Algoritmos-deviam-ser-ensinados-breadth-first,-e-não-depth-first
 
 Algoritmos deviam ser ensinados 

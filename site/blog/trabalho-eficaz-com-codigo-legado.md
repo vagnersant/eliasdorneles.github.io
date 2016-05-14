@@ -1,6 +1,6 @@
 Title: Trabalho Eficaz com Código Legado
 Date: 2014-01-26 17:58
-Author: elias
+Author: Elias Dorneles
 Slug: Trabalho-Eficaz-com-Código-Legado
 
 [Trabalho Eficaz com Código

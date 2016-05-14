@@ -1,6 +1,6 @@
 Title: Material do Tutorial: Web Scraping na Nuvem
 Date: 2015-11-13 10:04
-Author: elias
+Author: Elias Dorneles
 Slug: material-do-tutorial-web-scraping-na-nuvem
 Status: hidden
 

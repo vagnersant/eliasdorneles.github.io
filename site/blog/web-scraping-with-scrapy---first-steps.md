@@ -1,6 +1,6 @@
 Title: Web Scraping with Scrapy - first steps
 Date: 2014-08-30 19:29
-Author: elias
+Author: Elias Dorneles
 Slug: Web-Scraping-with-Scrapy---first-steps
 
 

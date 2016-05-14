@@ -1,6 +1,6 @@
 Title: Goodbye, JSF!
 Date: 2013-06-23 13:31
-Author: elias
+Author: Elias Dorneles
 Slug: Goodbye,-JSF!
 
 Ok, se você não é javeiro, talvez nunca tenha ouvido falar em JSF. *No

@@ -1,6 +1,6 @@
 Title: About me
 Date: 2015-07-12 19:59
-Author: elias
+Author: Elias Dorneles
 Slug: about-me
 
 I'm Elias Dorneles, programmer, musician and learning addict.

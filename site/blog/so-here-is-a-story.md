@@ -1,6 +1,6 @@
 Title: So, here is a story
 Date: 2014-06-13 14:00
-Author: elias
+Author: Elias Dorneles
 Slug: So,-here-is-a-story
 
 Soon after graduating, I went to work as a software developer for a big public

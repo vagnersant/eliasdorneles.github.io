@@ -1,6 +1,6 @@
 Title: VI Melhorado
 Date: 2013-09-26 16:49
-Author: elias
+Author: Elias Dorneles
 Slug: VI-Melhorado
 
 [Practical Vim](http://pragprog.com/book/dnvim/practical-vim) é um livro sobre

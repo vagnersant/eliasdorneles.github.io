@@ -1,6 +1,6 @@
 Title: Trying out something new
 Date: 2016-01-26 22:54
-Author: elias
+Author: Elias Dorneles
 Slug: trying-out-something-new
 
 

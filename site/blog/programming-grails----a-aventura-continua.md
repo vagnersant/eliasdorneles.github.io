@@ -1,6 +1,6 @@
 Title: Programming Grails -- a aventura continua
 Date: 2013-07-28 10:12
-Author: elias
+Author: Elias Dorneles
 Slug: Programming-Grails----a-aventura-continua
 
 Alguns dias atrás terminei de ler o *[Programming

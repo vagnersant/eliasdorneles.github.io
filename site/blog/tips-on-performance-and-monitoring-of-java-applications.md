@@ -1,6 +1,6 @@
 Title: Tips on Performance and Monitoring of Java Applications
 Date: 2014-06-16 20:06
-Author: elias
+Author: Elias Dorneles
 Slug: Tips-on-Performance-and-Monitoring-of-Java-Applications
 
 I cleaned up my desk this weekend and ended up finding some notes I wrote down

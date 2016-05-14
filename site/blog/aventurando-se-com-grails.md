@@ -1,6 +1,6 @@
 Title: Aventurando-se com Grails
 Date: 2013-06-03 20:09
-Author: elias
+Author: Elias Dorneles
 Slug: Aventurando-se-com-Grails
 
 Estou usando [Grails](http://www.grails.org) ativamente há alguns meses

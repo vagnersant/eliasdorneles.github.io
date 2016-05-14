@@ -1,6 +1,6 @@
 Title: Steve Yegge's Rantings book
 Date: 2014-08-10 20:20
-Author: elias
+Author: Elias Dorneles
 Slug: Steve-Yegge's-Rantings-book
 
 
