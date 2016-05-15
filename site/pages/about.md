@@ -32,6 +32,7 @@ And here are a few others I've created or co-created:
 * [skinfer](https://github.com/scrapinghub/skinfer)
 * [flatson](https://github.com/scrapinghub/flatson)
 
+Plus others you can check at my [Github profile](https://github.com/eliasdorneles).
 
 ## Writing
 
