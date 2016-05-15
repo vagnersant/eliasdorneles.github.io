@@ -25,7 +25,6 @@
 
 <body id="index" class="home">
     <a name="top"></a>
-{% include 'github.html' %}
 
 <div class="site-container">
         <header id="banner" class="body">
@@ -41,10 +40,6 @@
                     <li {% if p == page %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
-                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a></li>
-                {#{% for cat, null in categories %}
-                    <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                {% endfor %}#}
                 </ul></nav>
         </header><!-- /#banner -->
 

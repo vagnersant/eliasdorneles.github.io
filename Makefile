@@ -17,6 +17,9 @@ help:
 compile:
 	${COMPILE}
 
+debug:
+	pudb `which pelican` ${SITE_DIR} -t ${THEME_DIR} -o ${OUTPUT_DIR} -s settings.py
+
 clean:
 	rm -rf ${OUTPUT_DIR} cache
 
