@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<section id="content" class="body">
-{% with articles = dates %}
-{% set list_title = 'All articles'  %}
-{% include "article_list.html" %}
-{% endwith %}
-</section>
-{% endblock %}
