@@ -7,8 +7,8 @@ Alias: /pages/about-me.html
 Hello, I'm Elias Dorneles, a software developer from Brazil.
 I play the guitar and the piano a little bit, and I love to learn new things.
 
-I work at [Scrapinghub](http: // scrapinghub.com) building stuff for storing, manipulating
-and moving datasets of scraped data.
+I work at [Scrapinghub](http://scrapinghub.com) building stuff for storing,
+processing and moving huge datasets of scraped data.
 
 You can find me on [Twitter](https://twitter.com/eliasdorneles), [Github](https://github.com/eliasdorneles) and
 [Stackoverflow](http://stackoverflow.com/users/149872/elias?tab=profile).
