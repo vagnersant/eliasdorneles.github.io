@@ -41,4 +41,4 @@ Besides writing on [this blog](/), I also collaborate on
 a resource in Portuguese for Python programmers.
 
 I've also [translated to Portuguese](https://construa-seu-proprio-lisp.herokuapp.com/)
-the wonderful little book [Build Your Own Lisp](http://buildyourownlisp.com)
+the wonderful little book [Build Your Own Lisp](http://buildyourownlisp.com).

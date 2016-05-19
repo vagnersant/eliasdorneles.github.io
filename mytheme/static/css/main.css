@@ -54,6 +54,9 @@ body {
 .site-container {
     background-color: #fefefe;
     padding: 1em;
+    border: 1px solid #aaaaba;
+    border-top: 0;
+    border-bottom: 0;
 }
 
 a, a:hover, a:visited {
