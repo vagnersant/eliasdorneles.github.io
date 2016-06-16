@@ -22,7 +22,7 @@ POSTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'site', 'bl
 
 def run(args):
     try:
-        title = raw_input('Title: ')
+        title = raw_input('Title (hit ^C to cancel): ')
     except KeyboardInterrupt:
         return
 
