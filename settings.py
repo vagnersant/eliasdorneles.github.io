@@ -22,6 +22,11 @@ DISQUS_SITENAME = 'hopefulramble'
 
 JINJA_EXTENSIONS = ['jinja2.ext.with_']
 
+STATIC_PATHS = [
+    'images',
+    'static',
+]
+
 CLEAN_SUMMARY_MINIMUM_ONE = True
 
 CLEAN_SUMMARY_MAXIMUM = 1

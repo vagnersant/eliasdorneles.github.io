@@ -84,10 +84,23 @@ header:first-child h1 {
     margin-top: 1em;
 }
 
-h2 {
-    font-size: 1.2em;
+h2, h3, h4 {
+    font-size: 1em;
     margin: 0;
-    margin-top: 0.7em;
+    margin-top: 1em;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+h3 {
+    color: #666;
+}
+
+h4 {
+    font-size: 80%;
+    color: #666;
 }
 
 h1.archive-title {
@@ -123,8 +136,71 @@ hr {
     color: #ccc;
 }
 
-img {
+img, div.figure {
     max-width: 100%;
+    height: auto;
+}
+
+img {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 1em 1em 1em 0;
+    box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+img.align-left {
+    float: left;
+}
+
+img.align-right {
+    float: right;
+    margin: 1em 0 1em 1em;
+}
+
+.align-center {
+    display: block;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.figure {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 0 1em 1em 0;
+    box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+.figure.align-right {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.figure.align-left {
+    float: left;
+}
+
+.figure img {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.figure p.caption {
+    margin: 0;
+    font-size: 80%;
+    padding: 4px;
+    text-align: left;
+}
+
+.figure div.legend {
+    padding: 4px;
+    font-size: 80%;
+    color: #aaa;
+    font-style: italic;
 }
 
 .footer-menu {
