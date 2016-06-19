@@ -283,7 +283,8 @@ from a pull request into a new branch with only one command:
     git fetch origin pull/$PULL_REQUEST_ID/head:BRANCH_NAME
 
 If you're like me, you'll be lazy to type (and memorize) all that too,
-so here is an alias for doing that:
+so here is an alias for doing that, paste it under the `[alias]` section
+in your `~/.gitconfig`:
 
     fetch-pr = "!f(){\
         [ -z \"$1\" ] && { echo Usage: git fetch-pr PULL_REQUEST_ID [new_branch_name]; exit 1; }; \
