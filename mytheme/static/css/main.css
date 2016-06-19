@@ -87,7 +87,7 @@ header:first-child h1 {
 h2, h3, h4 {
     font-size: 1em;
     margin: 0;
-    margin-top: 1em;
+    margin-top: 1.8em;
 }
 
 h2 {
@@ -181,6 +181,14 @@ img.align-right {
     float: left;
 }
 
+/* always center figures at home page */
+.home-content .align-left, .home-content .align-right {
+  float: none;
+  display: block;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 .figure img {
     border: none;
     border-radius: 0;
@@ -241,8 +249,4 @@ blockquote:before {
 
 blockquote p {
     display: inline;
-}
-
-.literal-block {
-    overflow: auto;
 }
