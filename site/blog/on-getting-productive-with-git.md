@@ -1,7 +1,8 @@
-Title: Getting productive with Git and your text editor
+Title: On getting productive with Git
 Date: 2016-06-19 00:29
 Author: Elias Dorneles
-Slug: getting-productive-with-git-and-your-text-editor
+Slug: on-getting-productive-with-git
+
 
 I remember the first time I submitted a pull request in GitHub and someone
 asked me to squash the commits. I had
@@ -26,11 +27,11 @@ out with their first open source contribution.
 
 <!-- PELICAN_END_SUMMARY -->
 
-Well, nowadays [GitHub allows a maintainer to squash commits when merging]
-(https://help.github.com/articles/about-pull-request-merge-squashing/),
-which is pretty cool. But the thing is, this isn't a task that's particularly
-hard to do. When you have someone else to show you how, you pick it up real
-fast, but it can be scary when you're on your own.
+Well, nowadays [GitHub allows a maintainer to squash commits when
+merging](https://help.github.com/articles/about-pull-request-merge-squashing/),
+which is pretty cool. However, my point is that this isn't a task that's
+particularly hard to do. When you have someone else to show you how, you pick
+it up real fast. It's just a bit scary when you're on your own.
 
 I've found there are many little things like this with Git. Git is a fine tool
 for collaborating on software development and many open source developers would
@@ -52,9 +53,9 @@ projects.
 
 I want to share with you a couple things I learned in order to get productive
 with Git, in the hopes that it will ease your own learning curve and get you
-productive quicker. This won't be a Git tutorial, think of it more like a
-booster of your own Git learning. There are better tutorials elsewhere,
-[this is a cool one](https://try.github.io).
+productive quicker. This won't be a Git tutorial, it's more like a booster of
+your own Git learning. These are things that helped me to learn and use Git
+better. If you want a tutorial, [this is a cool one](https://try.github.io).
 
 I'm far from a Git expert, most of what I learned was while trying to get stuff
 done, usually after googling for _"how to do X in Git"_. I have trouble
@@ -80,9 +81,9 @@ don't worry, you can undo it with the following command:
 This will undo the last commit, but will keep your files intact
 so you won't lose any work.
 
-Now, if you've just tried that and it didn't work it's because
-I've lied to you -- sorry! That command doesn't exist by default
-in Git, but it should! In order to add it, run the following command:
+Now, if you've just tried running that and it didn't work it's because I've
+lied to you -- sorry! That command doesn't exist by default in Git, but it
+should! In order to add it, run the following command:
 
     git config --global alias.undo-commit 'reset HEAD~1 --mixed'
 
@@ -92,10 +93,14 @@ command line interface to something that's actually usable. Aliases (and
 Git's global configuration for your user) are stored in a `.gitconfig`
 file in your user directory, which you can edit using your editor if you like.
 
-Later on, we'll see how to use Bash aliases and functions to further improve the workflow.
+In fact, you can even add an alias to add new aliases more easily, but this may
+be getting out of hand... Anyway, later on, we'll see also how to use Bash
+aliases and functions to further improve the workflow.
 
-You can check [my personal gitconfig](https://github.com/eliasdorneles/dotfiles/tree/master/gitconfig)
-(which contains the stuff I share here and more) if you came here just for Git aliases.
+You can check [my personal
+gitconfig](https://github.com/eliasdorneles/dotfiles/tree/master/gitconfig)
+(which contains the stuff I share here and more) if you're already familiar
+with this stuff and came here only for the Git aliases.
 
 You can use any other alias name that you prefer instead of `undo-commit`
 there. Personally, I use just `undo` for this one.
@@ -169,7 +174,13 @@ the default for some time, together with many other nice usability
 improvements.
 
 
-## Add only files that were edited, ignore new ones
+## Preparing files to commit, the easy way
+
+I rarely run the command `git add FILENAME`.
+
+I usually use short aliases to either `git add --update` or `git add --all`.
+
+### Add only files that were edited, ignore new ones
 
 When you want to commit all files that you have edited,
 ignoring any new files that may now be inside the repo
@@ -186,8 +197,7 @@ files that were edited inside a directory:
 
     git add -u tests/
 
-
-## Commit all files, detecting files that were renamed
+### Add all files, detecting file renames and deletes
 
 Git expects you to tell it when you rename or delete files.  You can ask Git to
 prepare the whole set of changes you have to be committed, including adding,
@@ -199,11 +209,9 @@ You can also give it a directory, so that Git only does this for the stuff under
 
     git add --all some_dir/
 
-I use this so often, that it's worth to add an alias:
+I use this so often, that it deserved an alias:
 
     git config --global alias.aa 'add --all'
-
-Now I can use simply `git aa`.
 
 
 ## Solve conflicts only once
@@ -221,11 +229,109 @@ the same conflict it will just apply your previous fix. This way, you won't need
 keep solving the same conflicts again and again and save a few brain cycles.
 
 
-    TIPS:
-    * git and bash aliases for human-friendly operations
-      * git d & git dc
-      * git ls
-      * git pullr
-      * git diff & git apply
-      * em  # edit modified files
-      * ec  # edit files with conflicts
+## Opening files in your editor
+
+I edit code in [Vim](http://www.vim.org).
+
+But even if you don't, you might find useful these Bash functions and aliases
+(taken from [my `~/.bashrc` file](https://github.com/eliasdorneles/dotfiles/blob/master/bashrc))
+and tweak them to your needs:
+
+```
+edit_modified_files(){
+    $EDITOR $( (git ls-files -m -o --exclude-standard; git diff --cached --name-only) | sort | uniq)
+}
+edit_files_with_conflicts(){
+    $EDITOR $(git diff --name-only --diff-filter=U)
+}
+edit_recently_commited(){
+    $EDITOR $(git show --name-only --oneline | egrep -v "^[a-z0-9]+ ")
+}
+alias em=edit_modified_files
+alias ec=edit_files_with_conflicts
+alias er=edit_recently_commited
+```
+
+I came up with these functions when I realized how often I wanted to do open
+the editor and load one of these set of files:
+
+1. the ones that are currently modified, so I can wrap it up for commit
+2. the ones that have conflicts, so I can fix them
+3. the ones that were in the last commit, so I can continue working on them
+
+This may or may not be useful to you, depending on how you use your editor.
+In my case, I open and close vim often, sometimes in different terminals,
+so this has been quite handy.
+
+
+## Fetching code from a pull request (GitHub only)
+
+If you maintain open source projects, you may like this one.
+
+When you want to check out locally the changes introduced by
+a pull request, in vanilla Git it's a bit of work (you have to add
+a new remote, fetch from it and then checkout the branch). GitHub
+allows you to skip adding a new remote, you can fetch the code
+from a pull request into a new branch with only one command:
+
+    git fetch origin pull/$PULL_REQUEST_ID/head:BRANCH_NAME
+
+If you're like me, you'll be lazy to type (and memorize) all that too,
+so here is an alias for doing that:
+
+    fetch-pr = "!f(){\
+        [ -z \"$1\" ] && { echo Usage: git fetch-pr PULL_REQUEST_ID [new_branch_name]; exit 1; }; \
+        branch=${2:-pr-$1}; \
+        git fetch origin \"pull/$1/head:$branch\"; \
+        }; f "
+
+This alias is using a shell function to parameterize it.
+If you run `git fetch-pr` it will show the help:
+
+    $ git fetch-pr
+    Usage: git fetch-pr PULL_REQUEST_ID [new_branch_name]
+
+Using this, to fetch the code from pull request #1234, you can do simply:
+
+    git fetch-pr 1234
+
+This will create a branch called `pr-1234` with the checked-out code.
+If you want to name the branch, just provide yet another parameter:
+
+    git fetch-pr 1234 new-branch-for-pull-request-1234
+
+
+## Other things that might be helpful
+
+`git stash` is an useful command to know: it makes it easier to switch to a
+different task, without having to copy files or lose your current uncommited
+progress.
+
+I've also found useful to know how to use diffs & patches, including the diff
+tools `git diff` & `git apply` and also the `patch` command-line tool. These
+are helpful a few times, when you have to replay your work in another
+repository.
+
+If you like to do atomic commits (i.e., making each commit introduces a small
+self-contained change), you will like the `git add -p` command. It starts an
+interactive session, asking for each piece of the diff if you want to include
+in the next commit or not.
+
+You will also like the `git diff --cached` command, which shows the diff for
+the stuff added to the index, i.e., the changes you're about to commit.
+
+One tool that I've been meaning to learn is [tig](http://jonas.nitro.dk/tig/),
+a console interface for Git. It has some nice features, like you can do `tig
+grep` to search files and then hit `e` on top of a search result to open the
+file in your editor in that exact place. I haven't adopted this tool fully
+in my workflow, though, I'm still evaluating.
+
+There is also this thing called [Legit](http://www.git-legit.org), created
+by [Kenneth Reitz](https://twitter.com/kennethreitz) (from [Python
+Requests](http://www.python-requests.org) and [httpbin](http://httpbin.org/)
+fame) which looks interesting. I have only recently started experimenting with
+it, so I can't comment much. I know that Git deserves something like it. If you
+use it, let me know how you like it.
+
+That's all I had for now, folks!
+Thanks for reading, feel free to share your own tips in the comments.
