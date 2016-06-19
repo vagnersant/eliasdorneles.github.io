@@ -194,6 +194,7 @@ img.align-right {
     font-size: 80%;
     padding: 4px;
     text-align: left;
+    color: #666;
 }
 
 .figure div.legend {
@@ -240,4 +241,8 @@ blockquote:before {
 
 blockquote p {
     display: inline;
+}
+
+.literal-block {
+    overflow: auto;
 }
