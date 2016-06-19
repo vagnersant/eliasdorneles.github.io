@@ -4,10 +4,13 @@ Author: Elias Dorneles
 Slug: on-getting-productive-with-git
 
 
-I remember the first time I submitted a pull request in GitHub and someone
-asked me to squash the commits. I had
-no idea what they were talking about. I didn't have any friends who knew Git, I
-was pretty much a noob on Git and GitHub.
+I remember the first time I submitted a pull request in GitHub and some
+reviewer asked me to [squash the
+commits](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits).
+I had no idea what they were talking about. I didn't have any friends who knew
+Git, I was pretty much a noob on Git and GitHub. It's easy to forget how scary
+this stuff can be for someone just starting out with their first open source
+contribution.
 
 <div class="figure align-right" style="width: 250px">
 <img src="{filename}/images/confused.png">
@@ -19,19 +22,17 @@ was pretty much a noob on Git and GitHub.
 It took me several weeks to figure out the whole thing because I was so afraid
 of messing up. And in the end the code didn't even got merged.
 
-I never forgot this, which is why today I avoid as much as possible to ask for
-someone to rebase their code in a pull request, unless I can pair with them
-and show how to do it.
-It's easy to forget how scary this stuff can be for someone just starting
-out with their first open source contribution.
+I never forgot my frustration during this, which is why today I avoid as much
+as possible to ask for someone to rebase their code in a pull request, unless I
+can pair with them and show how to do it.
 
 <!-- PELICAN_END_SUMMARY -->
 
 Well, nowadays [GitHub allows a maintainer to squash commits when
 merging](https://help.github.com/articles/about-pull-request-merge-squashing/),
-which is pretty cool. However, my point is that this isn't a task that's
-particularly hard to do. When you have someone else to show you how, you pick
-it up real fast. It's just a bit scary when you're on your own.
+which is pretty cool. However, this isn't a task that's particularly hard to
+do. When you have someone else to show you how, you pick it up real fast. It's
+just a bit scary when you're on your own.
 
 I've found there are many little things like this with Git. Git is a fine tool
 for collaborating on software development and many open source developers would
@@ -67,9 +68,14 @@ So, let's start! The first thing I want you to know is ...
 
 ## There is always a way to undo
 
-This is true even when you've used one of the power tools (`git rebase`) that
-rewrites the commit history. As long as you haven't deleted your local repo,
-you can always get back to a previous state.
+The fact that this isn't obvious and that undoing things in Git aren't
+always straightforward, is one of the biggest reasons for the fear of messing up.
+So, let's get rid of those fears first.
+
+Almost always, there is a way to undo whatever you've done. This is true even
+when you've used one of the power tools (`git rebase`) that rewrites the commit
+history. As long as you haven't deleted your local repo, you can always get
+back to a previous state.
 
 ### Undo a commit
 
@@ -118,7 +124,7 @@ Again, this is only after you've added the proper alias with the following comma
     git config --global alias.undo-add 'reset --keep'
 
 
-### Undoing a rebase gone wrong
+### Undo a rebase that went wrong
 
 If you've tried doing a rebase or some other command that rewrote the commit history
 and you want to undo it, you can use something called the reference log (or, `reflog`).
@@ -199,9 +205,9 @@ files that were edited inside a directory:
 
 ### Add all files, detecting file renames and deletes
 
-Git expects you to tell it when you rename or delete files.  You can ask Git to
-prepare the whole set of changes you have to be committed, including adding,
-deleting and renaming files, using the command:
+Git expects you to tell it when you rename or delete files. You can ask Git to
+add all changes to be committed, including adding, deleting and renaming
+files, using the command:
 
     git add --all
 
@@ -209,7 +215,7 @@ You can also give it a directory, so that Git only does this for the stuff under
 
     git add --all some_dir/
 
-I use this so often, that it deserved an alias:
+I use this so often that it deserved an alias:
 
     git config --global alias.aa 'add --all'
 
@@ -303,9 +309,10 @@ If you want to name the branch, just provide yet another parameter:
 
 ## Other things that might be helpful
 
-`git stash` is an useful command to know: it makes it easier to switch to a
-different task, without having to copy files or lose your current uncommitted
-progress.
+`git stash` is an useful command to know: it sets aside your current changes,
+so you can work in other stuff. Use `git stash pop` to get back the changes.
+This is handy to switch to a different task, without having to copy files or
+lose your current uncommitted progress.
 
 I've also found useful to know how to use diffs & patches, including the diff
 tools `git diff` & `git apply` and also the `patch` command-line tool. These
@@ -326,12 +333,16 @@ grep` to search files and then hit `e` on top of a search result to open the
 file in your editor in that exact place. I haven't adopted this tool fully
 in my workflow, though, I'm still evaluating.
 
-There is also this thing called [Legit](http://www.git-legit.org), created
-by [Kenneth Reitz](https://twitter.com/kennethreitz) (from [Python
+There is also this thing called [Legit](http://www.git-legit.org), a set of
+extensions (used via aliases) created by [Kenneth
+Reitz](https://twitter.com/kennethreitz) (from [Python
 Requests](http://www.python-requests.org) and [httpbin](http://httpbin.org/)
 fame) which looks interesting. I have only recently started experimenting with
 it, so I can't comment much. I know that Git deserves something like it. If you
 use it, let me know how you like it.
+
+Finally, you may also like this [StackOverflow thread with Git questions and
+answers](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide).
 
 That's all I had for now, folks!
 Thanks for reading, feel free to share your own tips in the comments.
