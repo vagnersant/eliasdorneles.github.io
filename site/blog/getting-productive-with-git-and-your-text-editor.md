@@ -45,8 +45,8 @@ XKCD comic is very real:
 </a>
 
 You want to get stuff done, you don't want to be spending cognition on your
-version control tool. With Git, it takes a while to get to a point where you
-don't need to think much about it, at least when you're collaborating on a
+version control tool. With Git, it takes a little while to get to a point where
+you don't need to think much about it, at least when you're collaborating on a
 project with many different people, as is the case in many open source
 projects.
 
@@ -84,7 +84,7 @@ Now, if you've just tried that and it didn't work it's because
 I've lied to you -- sorry! That command doesn't exist by default
 in Git, but it should! In order to add it, run the following command:
 
-    git config --global --add alias.undo-commit 'reset HEAD~1 --mixed'
+    git config --global alias.undo-commit 'reset HEAD~1 --mixed'
 
 This adds an alias, which is essentially a shortcut to another command.
 Git aliases are very helpful, because that's how you tweak Git's complicated
@@ -110,7 +110,7 @@ you can undo it with:
 
 Again, this is only after you've added the proper alias with the following command:
 
-    git config --global --add alias.undo-add 'reset --keep'
+    git config --global alias.undo-add 'reset --keep'
 
 
 ### Undoing a rebase gone wrong
@@ -147,17 +147,85 @@ your local repo.
 
 Alrighty, we're done covering undoing stuff. I hope now that you know how to
 undo, you will feel more comfortable trying more stuff without the fear of
-breaking things.
+breaking things. The next tips will be a bit more random.
+
+
+## Enable colors
+
+Your brain can parse this:
+
+<img src="http://i.imgur.com/OBOFz7A.png" width="400" class="align-center">
+
+Much easier than this:
+
+<img src="http://i.imgur.com/ajXQxbA.png" width="400" class="align-center">
+
+In case your Git output isn't showing colored output, configure it to do so:
+
+    git config --global color.ui auto
+
+Also, if you end up needing to do this, consider upgrading Git, this has been
+the default for some time, together with many other nice usability
+improvements.
+
+
+## Add only files that were edited, ignore new ones
+
+When you want to commit all files that you have edited,
+ignoring any new files that may now be inside the repo
+directory, do:
+
+    git add -u
+
+This is a shortcut to `git add --update`, which is the equivalent
+of doing a `git add` on every modified file that were previously
+commited.
+
+It can also take a directory, you can ask Git to add only
+files that were edited inside a directory:
+
+    git add -u tests/
+
+
+## Commit all files, detecting files that were renamed
+
+Git expects you to tell it when you rename or delete files.  You can ask Git to
+prepare the whole set of changes you have to be committed, including adding,
+deleting and renaming files, using the command:
+
+    git add --all
+
+You can also give it a directory, so that Git only does this for the stuff under it:
+
+    git add --all some_dir/
+
+I use this so often, that it's worth to add an alias:
+
+    git config --global alias.aa 'add --all'
+
+Now I can use simply `git aa`.
+
+
+## Solve conflicts only once
+
+When you're merging or rebasing often, some conflicts keep reappearing,
+specially when you're working temporarily on a branch. Instead of solving them
+again manually every time, ask Git to do it automatically, by enabling
+[`rerere`](https://git-scm.com/docs/git-rerere):
+
+    git config --global rerere.enabled true
+
+The name `rerere` stands for "reuse recorded resolution", and that's exactly what
+it does: it will record how you solved previous conflicts and next time it finds
+the same conflict it will just apply your previous fix. This way, you won't need to
+keep solving the same conflicts again and again and save a few brain cycles.
 
 
     TIPS:
     * git and bash aliases for human-friendly operations
-      * git aa
       * git d & git dc
       * git ls
-      * git cob
       * git pullr
       * git diff & git apply
-      * enable rerere
       * em  # edit modified files
       * ec  # edit files with conflicts
