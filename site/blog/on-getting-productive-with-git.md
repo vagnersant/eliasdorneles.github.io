@@ -73,7 +73,7 @@ you can always get back to a previous state.
 
 ### Undo a commit
 
-If you've commited and then realized that you didn't mean to,
+If you've committed and then realized that you didn't mean to,
 don't worry, you can undo it with the following command:
 
     git undo-commit
@@ -150,7 +150,7 @@ your local repo.
 
 ------------------
 
-Alrighty, we're done covering undoing stuff. I hope now that you know how to
+Alright, we're done covering undoing stuff. I hope now that you know how to
 undo, you will feel more comfortable trying more stuff without the fear of
 breaking things. The next tips will be a bit more random.
 
@@ -190,7 +190,7 @@ directory, do:
 
 This is a shortcut to `git add --update`, which is the equivalent
 of doing a `git add` on every modified file that were previously
-commited.
+committed.
 
 It can also take a directory, you can ask Git to add only
 files that were edited inside a directory:
@@ -244,12 +244,12 @@ edit_modified_files(){
 edit_files_with_conflicts(){
     $EDITOR $(git diff --name-only --diff-filter=U)
 }
-edit_recently_commited(){
+edit_recently_committed(){
     $EDITOR $(git show --name-only --oneline | egrep -v "^[a-z0-9]+ ")
 }
 alias em=edit_modified_files
 alias ec=edit_files_with_conflicts
-alias er=edit_recently_commited
+alias er=edit_recently_committed
 ```
 
 I came up with these functions when I realized how often I wanted to do open
@@ -304,7 +304,7 @@ If you want to name the branch, just provide yet another parameter:
 ## Other things that might be helpful
 
 `git stash` is an useful command to know: it makes it easier to switch to a
-different task, without having to copy files or lose your current uncommited
+different task, without having to copy files or lose your current uncommitted
 progress.
 
 I've also found useful to know how to use diffs & patches, including the diff
