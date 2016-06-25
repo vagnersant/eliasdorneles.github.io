@@ -10,7 +10,9 @@ I play the guitar and the piano a little bit, and I love to learn new things.
 I work at [Scrapinghub](http://scrapinghub.com) building stuff for storing,
 processing and moving huge datasets of scraped data.
 
-You can find me on [Twitter](https://twitter.com/eliasdorneles), [Github](https://github.com/eliasdorneles) and
+You can find me on [Twitter](https://twitter.com/eliasdorneles),
+[Github](https://github.com/eliasdorneles),
+[GoodReads](https://www.goodreads.com/user/show/32990128-elias) and
 [Stackoverflow](http://stackoverflow.com/users/149872/elias?tab=profile).
 
 <a href="http://stackexchange.com/users/50263">
