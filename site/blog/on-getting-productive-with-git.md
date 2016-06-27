@@ -60,7 +60,7 @@ better. If you want a tutorial, [this is a cool one](https://try.github.io).
 
 I'm far from a Git expert, most of what I learned was while trying to get stuff
 done, usually after googling for _"how to do X in Git"_. I have trouble
-understanding Git's help because it seems to be written to people that know Git
+understanding Git's help because it seems to be written for people that know Git
 internals, using all this unfamiliar vocabulary. But I can get stuff done, and
 you can too.
 
