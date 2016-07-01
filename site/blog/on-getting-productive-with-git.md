@@ -272,6 +272,10 @@ so this has been quite handy.
 
 ## Fetching code from a pull request (GitHub only)
 
+> **Update:** [A friend](https://github.com/immerrr) has pointed out that
+> another option is to [add a configuration to have the PRs fetched
+> automatically](https://gist.github.com/piscisaureus/3342247).
+
 If you maintain open source projects, you may like this one.
 
 When you want to check out locally the changes introduced by
