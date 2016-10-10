@@ -63,7 +63,7 @@ tivesse sabido delas antes.
 1) É mais prático voltar para o modo Normal usando `<Ctrl-C>` em vez de `<Esc>`
 -- especialmente se você mapeia a tecla `<caps lock>` para um `<ctrl>`
 alternativo, como eu faço. Veja [outras maneiras de evitar o
-*<esc></esc>*](http://vim.wikia.com/wiki/Avoid_the_escape_key).
+<kbd>Esc</kbd>](http://vim.wikia.com/wiki/Avoid_the_escape_key).
 
 2) Se a meio caminho de uma seleção visual você se dá conta que começou do
 lugar errado, você pode ir para o "outro lado" da seleção usando a tecla `o`
