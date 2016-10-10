@@ -14,6 +14,7 @@ sobre o Vim, disponíveis gratuitamente em
 Thought](http://eljunior.files.wordpress.com/2013/09/dnvim.jpg?w=250 "Practical
 Vim")](http://pragprog.com/book/dnvim/practical-vim)
 
+<!-- PELICAN_END_SUMMARY -->
 
 Se você ainda não conhece o Vim, talvez esse livro não seja um começo
 adequado. É bom ter pelo menos seguido o
