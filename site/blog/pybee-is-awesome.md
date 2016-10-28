@@ -30,7 +30,7 @@ part of the picture.
 
 It's about enabling people who learned a little bit of Python programming to
 build something for their own needs, using the devices and environments they're
-already use now. That means smartphones, tablets and web browsers.
+already using now. That means smartphones, tablets and web browsers.
 
 Sure, professional programmers can dive into new programming languages and
 environments to be able to build a nice native app. But professional
