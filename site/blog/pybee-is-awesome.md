@@ -68,7 +68,7 @@ codebase, but the foundation is there.
 If you love Python and are looking for an open source project to contribute,
 consider the [BeeWare project](http://pybee.org/contributing/).
 
-It's gotta a wonderful mission, it's welcoming to beginners and there's plenty
+It's got a wonderful mission, it's welcoming to beginners and there's plenty
 of work to do. You'll be helping to build the future of Python.
 
 Go watch the video of the talk [Python All the Things][2], presented at Pycon
