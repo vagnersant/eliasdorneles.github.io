@@ -18,7 +18,7 @@ TIMEZONE = 'America/Sao_Paulo'
 
 GITHUB_URL = 'https://github.com/eliasdorneles'
 
-DISQUS_SITENAME = 'hopefulramble'
+# DISQUS_SITENAME = 'hopefulramble'
 
 JINJA_EXTENSIONS = ['jinja2.ext.with_']
 
