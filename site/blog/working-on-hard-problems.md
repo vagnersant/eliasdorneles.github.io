@@ -47,7 +47,7 @@ precisely what would help when tackling a tough problem.
 We’re eager to believe in [the myth of the genius programmer][1], which helps to
 increase our insecurity. Most programmers have some personal heroes, and that’s
 not a bad thing, but it’s good to remind ourselves these heroes are just
-people, not that much different than you and me. I bet they see themselves as just
+people, not that different from you and me. I bet they see themselves as just
 people working in hard problems. In some cases they might’ve been privileged
 with early access to technology or guidance from knowledgeable people, but I
 have the feeling that our heroes are mostly just people who are willing to give
