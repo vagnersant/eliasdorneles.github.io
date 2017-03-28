@@ -59,17 +59,21 @@ else than just print, do I have to write a sink-like code every time?"
 
 After mulling for a bit, I realized that the most important gain from the
 co-routine code was being able to "pause execution", so I figured I could write
-a generator function that would consume the input lazily.
+a generator function that would consume the input lazily. While attempting
+to do that, I realized I don't even need it to be a generator, it can
+be just a regular function that will consume the input lazily and
+return the full results.
 
-So [that's what I did, and decided that I like this code more than the co-routine version](https://github.com/eliasdorneles/lazy-eval-gt-state-machines/blob/master/004_imperative_final.py).
-I think it allows you to skip thinking about the explicit states, it's lazy and
-it's easy to use (just a regular iterable).
+And [that's what I did, and decided that I like this code more than the co-routine version](https://github.com/eliasdorneles/lazy-eval-gt-state-machines/blob/master/004_imperative_final.py).
+I think it allows you to skip thinking about the explicit states when writing
+the code, it's lazy and it's easy to use (just a regular function).
 
 I'm not sure if it's better than the state machine version, though,
 because I think to read it and understand you sort of have to build a
-mental model of the states in your head.
+mental model of the states in your head. So it seems easier to write,
+but may be tougher to read.
 I think for state machines with high number of states this would not be
-good for maintainability, and you'd probably wish you'd have the diagram too.
+good for maintainability, and you'd probably want have a diagram.
 
 I also had [a bug on the first
 implementation](https://github.com/eliasdorneles/lazy-eval-gt-state-machines/commit/458fb7e124dff3bb06a9f61b62453507ad0c3d75),
