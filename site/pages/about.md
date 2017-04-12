@@ -23,6 +23,7 @@ You can find me on [Twitter](https://twitter.com/eliasdorneles),
 
 I collaborate in the development of some open source projects:
 
+* [BeeWare](http://pybee.org) (I help maintain [VOC](https://github.com/pybee/voc) and the Android tooling)
 * [Scrapy](http://www.scrapy.org)
 * [cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
 * [parsel](https://github.com/scrapy/parsel)
