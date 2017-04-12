@@ -4,8 +4,11 @@ Author: Elias Dorneles
 Slug: Web-Scraping-with-Scrapy---first-steps
 
 
+<strong>Update:</strong> This tutorial isn't up to date with the latest and greatest of Scrapy. You should follow [the official documentation instead](https://docs.scrapy.org/en/latest/intro/overview.html), I've worked together with other Scrapy developers to make it better. I'm leaving this article online for archival purposes only.
 
-<sub>See [a Portuguese version of this article here](https://pythonhelp.wordpress.com/2014/08/05/web-scraping-com-scrapy-primeiros-passos/)</sup>
+<sub>[Leia a versão em Português](https://pythonhelp.wordpress.com/2014/08/05/web-scraping-com-scrapy-primeiros-passos/)</sup>
+
+---------------------------
 
 Imagine you want to extract content from the Web that isn't all in only one
 page: you need a way tonavigate through the site to get to the pages that
