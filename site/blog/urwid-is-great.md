@@ -6,7 +6,7 @@ Slug: urwid-is-great
 Ever since I started using the awesome [pudb debugger for Python
 programs](https://pypi.python.org/pypi/pudb) I've been curious about the [urwid
 library](http://urwid.org/), an user interface library for console-based
-applications. The [examples in the
+applications that the debugger uses. The [examples in the
 gallery](http://urwid.org/examples/index.html) are just gorgeous!
 
 So last week I decided I would write a console-based game and learn Urwid in the process.
@@ -24,7 +24,7 @@ Then it was time to start coding, I started by trying to write something that I 
 
 After reading about widget layouts and sizings, I thought I wanted a fixed size widget, but my attempts to write one were hard to use, I kept running into [errors that happen when you try to use a fixed widget with things that expect something else](https://github.com/urwid/urwid/wiki/FAQ#what-does-the-attributeerror-xxx-object-has-no-attribute-rows-error-mean).
 
-I was finally able to do it after reading more carefully the [documentation about custom widgets](http://urwid.org/manual/widgets.html#custom-widgets) and figured it was easier to use the WidgetWrap class around a ``urwid.Text`` widget drawing the card using line-breaks to break the content.
+I was finally able to do it after reading more carefully the [documentation about custom widgets](http://urwid.org/manual/widgets.html#custom-widgets) and figured it was easier to use the ``urwid.WidgetWrap`` class around a ``urwid.Text`` widget drawing the card using line-breaks to break the content.
 
 Overall I found the library nicely documented and very well designed.
 
@@ -34,6 +34,6 @@ I'm really liking to play with this library, I think I'll try more stuff with it
 
 If you want to play the game, you can install it with:
 
-    pip install solitaire
+    pip install usolitaire
 
 The [source code is on Github](https://github.com/eliasdorneles/usolitaire).
