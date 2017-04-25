@@ -350,4 +350,3 @@ Finally, you may also like this [StackOverflow thread with Git questions and
 answers](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide).
 
 That's all I had for now, folks!
-Thanks for reading, feel free to share your own tips in the comments.
